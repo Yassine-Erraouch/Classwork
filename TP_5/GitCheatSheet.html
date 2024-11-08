@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>git cheat sheet</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            width:100%;
+            margin: 0;
+            padding: 20px;;
+            border: 0;
+            background-color: rgb(236, 236, 236);
+            font-family: Georgia, 'Times New Roman', Times, serif
+        }
+
+        .main .left {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 50%;
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        .main .rigth {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 50%;
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        table {
+            background-color: peachpuff;
+            border-radius: 15px;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        table tr td {
+            width: 400px;
+        }
+        .title table tr:first-of-type td:first-of-type {
+            width: 50px;
+        }
+
+        .title table tr:first-of-type td:nth-of-type(2) {
+            font-weight: bold;
+            font-size: 2em;
+        }
+
+        .title table tr:first-of-type td:first-of-type i {
+            font-size: 
+        }
+
+        .title table tr:nth-of-type(2) td {
+            color: rgb(12, 161, 12)
+        }
+        .last {
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="left">
+            <div class="title">
+                
+                <table>
+                    
+                    <tr>
+                        <td rowspan="2"><i class="fa-brands fa-github"></i></td>
+                        <td>Github Cheat Sheet</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Versionner son travail
+                        </td>
+                    </tr>
+
+                </table>
+
+            </div>
+    
+            <div class="container">
+                
+                <table>
+
+                    <tr>
+                        <td colspan="2">Versionner en local</td>
+                        <td></td>
+                    </tr>
+    
+                    <tr>
+                        <td>git init</td>
+                        <td>initialise le dépôt (se mettre sur le bon dossier), mieux à faire
+                            depuis Github.com</td>
+                    </tr>
+    
+                    <tr>
+                        <td>git add .</td>
+                        <td>ajoute toutes les modifications (le . symbolise tout)</td>
+                    </tr>
+    
+                    <tr>
+                        <td>git commit -m "explication"</td>
+                        <td>
+                            créer un nouveau commit, git add pousse les fichiers en zone
+                            d'index, git commit les sauvegarde réellement dans un
+                            nouveau commit
+                        </td>
+                    </tr>
+
+                </table>
+
+            </div>
+    
+            <div class="container">
+               
+                <table>
+                    
+                    <tr>
+                        <td colspan="2">Gérer les commits</td>
+                    </tr>
+    
+                    <tr>
+                        <td>Lorem, ipsum.</td>
+                        <td>Perferendis, minus.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Lorem, ipsum.</td>
+                        <td>Repellat, rem.</td>
+                    </tr>
+                    <tr>
+                        <td>Lorem, ipsum.</td>
+                        <td>Vitae, voluptatum.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Lorem, ipsum.</td>
+                        <td>Minus, excepturi!</td>
+                    </tr>
+
+                    <tr>
+                        <td>Lorem, ipsum.</td>
+                        <td>Atque, exercitationem?</td>
+                    </tr>
+
+                </table>
+
+            </div>
+    
+            <div class="container">
+                
+                <table>
+                    <tr>
+                        <td colspan="2">Versionner sur un dépot distant</td>
+                    </tr>
+
+                    <tr>
+                        <td>Lorem, ipsum.</td>
+                        <td>Voluptatem, excepturi.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Lorem, ipsum.</td>
+                        <td>Ipsam, deserunt.</td>
+                    </tr>
+                    <tr>
+
+                        <td>Lorem, ipsum.</td>
+                        <td>Rerum, provident?</td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    
+        <div class="left">
+            <div class="container">
+                
+                <table>
+                    <tr>
+                        <td colspan="2">Naviguer dans Git bash</td>
+                    </tr>
+
+                    <tr>
+                        <td>Lorem, ipsum.</td>
+                        <td>Laborum, dolorem.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Lorem, ipsum.</td>
+                        <td>Deleniti, sit!</td>
+                    </tr>
+
+                    <tr>
+                        <td>Lorem, ipsum.</td>
+                        <td>Neque, iusto.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Lorem, ipsum.</td>
+                        <td>Soluta, magni.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Lorem, ipsum.</td>
+                        <td>Aut, sapiente.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Lorem, ipsum.</td>
+                        <td>Ullam, velit?</td>
+                    </tr>
+
+                    <tr>
+                        <td>Lorem, ipsum.</td>
+                        <td>Quis, repudiandae.</td>
+                    </tr>
+
+                </table>
+
+            </div>
+            <div class="container">
+
+                <table>
+
+                    <tr>
+                        <td colspan="2">Initialisation de git</td>
+                    </tr>
+
+                    <tr>
+                        <td>Lorem, ipsum.</td>
+                        <td>Harum, nam?</td>
+                    </tr>
+
+                    <tr>
+                        <td>Lorem, ipsum.</td>
+                        <td>Fuga, inventore.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Lorem, ipsum.</td>
+                        <td>Aliquid, commodi!</td>
+                    </tr>
+
+                </table>
+
+            </div>
+            <div class="container">
+
+                <table>
+                    <tr>
+                        <td colspan="2">Autres commandes</td>
+                    </tr>
+
+                    <tr>
+                        <td>Lorem, ipsum.</td>
+                        <td>Hic, laudantium!</td>
+                    </tr>
+                    <tr>
+                        <td>Lorem, ipsum.</td>
+                        <td>Placeat, necessitatibus.</td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <div class="container last">
+                <div class="left-container">
+
+                    <table>
+                        <tr>
+                            <td colspan="2">Commit son projet sur Github</td>
+                        </tr>
+
+                        <tr>
+                            <td>Lorem, ipsum.</td>
+                            <td>Explicabo, natus.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Lorem, ipsum.</td>
+                            <td>Officia, ipsum.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Lorem, ipsum.</td>
+                            <td>Unde, eum?</td>
+                        </tr>
+
+                    </table>
+
+                </div>
+
+                <div class="right-container">
+                    <img src="./git buddy (1).png" alt="git buddy">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
