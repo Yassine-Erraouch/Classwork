@@ -12,7 +12,7 @@
             border: 0;
             font-size: 100%;
         }
-
+        /* stylint .main */
         .main {
             display: flex;
             flex-direction: row;
@@ -21,10 +21,11 @@
             margin: 0;
             padding: 20px;;
             border: 0;
-            background-color: rgb(236, 236, 236);
+
             font-family: Georgia, 'Times New Roman', Times, serif
         }
 
+        /* styling the .left div of .main */
         .main .left {
             display: flex;
             flex-direction: column;
@@ -33,9 +34,27 @@
             margin: 0;
             padding: 0;
             border: 0;
+            margin-left: 5px;
+        }
+        
+        .main .left .title {
+            width: 100%;
         }
 
-        .main .rigth {
+        .main .left .container {
+            width: 100%;
+        }
+
+        .main .right .container {
+            width: 100%;
+        }
+
+        .main .right .last {
+            width: 100%;
+        }
+
+        /* styling the .right div of .main */
+        .main .right {
             display: flex;
             flex-direction: column;
             height: 100%;
@@ -43,18 +62,33 @@
             margin: 0;
             padding: 0;
             border: 0;
+            margin-left: 5px;
         }
 
+        /* styling the tables of .left */
+
         table {
-            background-color: peachpuff;
             border-radius: 15px;
             margin: 5px;
             padding: 5px;
+            line-height: 25px;;
         }
 
-        table tr td {
-            width: 400px;
+        table tr td:first-child {
+            width: 170px;
         }
+
+        table tr td:nth-child(2) {
+            width:300px;
+        }
+
+        /* styling the icon in .title */
+
+        .title table tr:first-of-type td i {
+            font-size: 4em;
+            padding-bottom: 20px;
+        }
+
         .title table tr:first-of-type td:first-of-type {
             width: 50px;
         }
@@ -64,17 +98,82 @@
             font-size: 2em;
         }
 
-        .title table tr:first-of-type td:first-of-type i {
-            font-size: 
+        .title table tr:nth-of-type(2) td {
+            color: #2ea44f
         }
 
-        .title table tr:nth-of-type(2) td {
-            color: rgb(12, 161, 12)
+        .main table:not(.title table) tr:first-of-type td:first-of-type {
+            text-align: center;
+            border-bottom: 1px solid gray;
         }
         .last {
             display: flex;
             flex-direction: row;
+            align-items: center;
+            gap: 0px;
         }
+
+        .left .container .green {
+            background-color:#2ea44f;
+        }
+
+        .left .container table:not(.green) {
+            background-color: #dfe0e0;
+        }
+
+        /* styling the tables of .right */
+
+        .right table:not(.last table) {
+            background-color: #dfe0e0;
+        }
+
+        .right .last .container {
+            width: 50%;
+        }
+        /* styling the table in .right .last */
+
+        .right .last table {
+            background-color: #212121;
+            width: 100%;
+        }
+
+        .right .last table tr:first-of-type {
+            color:white;
+        }
+
+        .right .last table tr:not(:first-of-type) {
+            color: #2ea44f
+        }
+
+        /* styling the image in .last */
+
+        .right .last img {
+            height: 100px;
+            object-fit: cover;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        /* adjusting font size of all text in tables except the first row */
+
+        table tr:not(:first-of-type) td {
+            font-size: 0.8em;
+        }
+
+        /* making the text in all the first rows of tables bold except the .title table */
+
+        table tr:first-of-type td {
+            font-weight: bold;
+        }
+
+        /* making the text in all the first td's of each row bold except the .title table */
+
+        table tr td:first-of-type {
+            font-weight: bold;
+        }
+
+
     </style>
 </head>
 <body>
@@ -101,11 +200,11 @@
     
             <div class="container">
                 
-                <table>
+                <table class="green">
 
                     <tr>
                         <td colspan="2">Versionner en local</td>
-                        <td></td>
+                    
                     </tr>
     
                     <tr>
@@ -170,7 +269,7 @@
     
             <div class="container">
                 
-                <table>
+                <table class="green">
                     <tr>
                         <td colspan="2">Versionner sur un dépot distant</td>
                     </tr>
@@ -194,7 +293,7 @@
             </div>
         </div>
     
-        <div class="left">
+        <div class="right">
             <div class="container">
                 
                 <table>
