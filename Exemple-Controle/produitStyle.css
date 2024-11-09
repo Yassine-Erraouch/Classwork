@@ -73,10 +73,11 @@ html, body {
 /* adjusting the spacing of the table  */
 form table {
     border-spacing: 12px;
+    width: 100%;
 }
 
 form table tr td {
-    width: 200px
+    width: 50%;
 }
 
 /* styling the button */
@@ -88,5 +89,28 @@ button {
     padding: 5px;
     margin: 5px;
     cursor: pointer;
+}
+
+
+/* adding media query for phones */
+
+@media (max-width: 600px) {
+    .card1 {
+        flex-direction: column;
+    }
+
+    .card1 .image {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    .copy {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
 }
 
