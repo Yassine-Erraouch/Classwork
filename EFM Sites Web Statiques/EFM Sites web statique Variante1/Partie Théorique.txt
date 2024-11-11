@@ -1,0 +1,23 @@
+Q2.
+    CSS:
+        h1 + p {
+            /* CSS styles */
+        }
+
+Q3.B
+
+Q4.A
+
+Q5.C
+
+Q6.A
+
+Q7.C
+
+Q8.
+    @media (orientation: portrait) {
+        /* CSS styles */
+        /*body {
+            background-color: red;
+        }*/
+    }

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>partie pratique EFM sites web statiques variante 1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style type="text/css">
+
+        /* giving all elements border-box box-sizing for consistent sizing */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        /* styling the body */
+        body {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font-family: 'arial', Courier, monospace;
+        }
+
+        /* styling the header */
+        .header {
+            height: 10%;
+            width: 100%;
+            margin: 0;
+            background-color: black;
+            color: white;
+            border-radius: 15px 15px 0px 0px;
+        }
+
+        /* styling the header ul */
+        .header ul {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            padding-block: 1%
+        }
+
+        /* adding space between the list items */
+        .header ul li {
+            margin-inline: 5%;
+
+        }
+        /* styling the anchor elements of the header */
+        .header ul li a {
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        /* styling the main */
+        .main {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 80%;
+        }
+
+        /* styling the sidebar */
+        .main .sidebar {
+            width: 20%;
+            background-color: lightgrey;
+        }
+
+        .sidebar ul  {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        /* styling the articles */
+        .articles {
+            display:flex;
+            flex-wrap: wrap;
+            width: 80%;
+            height: 100%;
+            padding-left: 2%;
+            padding-right: 2%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- .header for the navigation elements of the header -->
+    <div class="header">
+        <ul>
+            <li><a href="">Acceuil</a></li>
+            <li><a href="">Á propos</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </div>
+
+    
+
+    <!-- .main for the article blocks -->
+    <div class="main">
+        <!-- .sidebar for the external links -->
+        <div class="sidebar">
+            <ul>
+                <li><a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i>lien externe 1</a></li>
+                <li><a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i>lien externe 2</a></li>
+            </ul>
+        </div>
+
+        <div class="articles">
+            <!-- each article is composed of an h2, a paragraph and a list of comments within a div -->
+            <div class="article">
+                <h2>Lorem ipsum dolor sit.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur, facilis!</p>
+                <div class="comment-section">
+                    <div class="comment">
+                        <p class="name">John Doe</p>
+                        <p class="comment-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="comment">
+                        <p class="name">Jane Doe</p>
+                        <p class="comment-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article">
+                <h2>Consectetur adipisicing elit.</h2>
+                <p>Consectetur, facilis! Eaque, quas.</p>
+                <div class="comment-section">
+                    <div class="comment">
+                        <p class="name">Bob Smith</p>
+                        <p class="comment-text">Consectetur adipisicing elit. Eaque, quas.</p>
+                    </div>
+                    <div class="comment">
+                        <p class="name">Alice Johnson</p>
+                        <p class="comment-text">Consectetur adipisicing elit. Eaque, quas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article">
+                <h2>Eaque, quas.</h2>
+                <p>Eaque, quas. Ratione, placeat.</p>
+                <div class="comment-section">
+                    <div class="comment">
+                        <p class="name">David Lee</p>
+                        <p class="comment-text">Eaque, quas. Ratione, placeat.</p>
+                    </div>
+                    <div class="comment">
+                        <p class="name">Sarah Taylor</p>
+                        <p class="comment-text">Eaque, quas. Ratione, placeat.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article">
+                <h2>Ratione, placeat.</h2>
+                <p>Ratione, placeat. Nihil, quia.</p>
+                <div class="comment-section">
+                    <div class="comment">
+                        <p class="name">Michael Brown</p>
+                        <p class="comment-text">Ratione, placeat. Nihil, quia.</p>
+                    </div>
+                    <div class="comment">
+                        <p class="name">Emily Davis</p>
+                        <p class="comment-text">Ratione, placeat. Nihil, quia.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+    <!-- .footer for the footer -->
+    <div class="footer">
+        <p>@2024 Tous les droits reservés</p>
+    </div>
+</body>
+</html>
