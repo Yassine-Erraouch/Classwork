@@ -103,8 +103,8 @@
         }
         
         /* styling the first p in .article */
-        .article p:first-of-type {
-            border-bottom: 1px dotted lightgray;
+        .article p {
+            border-bottom: 1px solid lightgray;
         }
 
         /*styling .footer*/
