@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css" >
+        .container {
+            display: flex;
+            width: auto;
+            color: white;
+        }
+
+        .child-container {
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .item1 {
+            background-color: salmon;
+            flex: 2 1 300px;
+            order: 3;
+        }
+
+        .item2 {
+            background-color: seagreen;
+            flex: 1 1 300px;
+            order: 1;
+        }
+
+        .item3 {
+            background-color: antiquewhite;
+            flex: 1 2 300px;
+            order:-1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="child-container item1">item1</div>
+        <div class="child-container item2">item2</div>
+        <div class="child-container item3">item3</div>
+    </div>
+</body>
+</html>
