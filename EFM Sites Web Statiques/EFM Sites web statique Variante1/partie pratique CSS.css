@@ -1,129 +1,166 @@
 
-        /* giving all elements border-box box-sizing for consistent sizing */
-        *, *::before, *::after {
-            box-sizing: border-box;
-        }
+/* giving all elements border-box box-sizing for consistent sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
-        /* styling the body */
-        body {
-            margin: 0;
-            padding: 0;
-            border: 0;
-            font-size: 100%;
-            font-family: 'arial', Courier, monospace;
-        }
+/* styling the body */
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: 'arial', Courier, monospace;
+}
 
-        /* styling the header */
-        .header {
-            height: 10%;
-            width: 100%;
-            margin: 0;
-            background-color: black;
-            color: white;
-            border-radius: 15px 15px 0px 0px;
-        }
+/* styling the header */
+.header {
+    height: 10%;
+    width: 100%;
+    margin: 0;
+    background-color: black;
+    color: white;
+    border-radius: 15px 15px 0px 0px;
+}
 
-        /* styling the header ul */
-        .header ul {
-            display: flex;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            justify-content: center;
-            align-items: center;
-            padding-block: 1%
-        }
+/* styling the header ul */
+.header ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-block: 1%
+}
 
-        /* adding space between the list items */
-        .header ul li {
-            margin-inline: 5%;
+/* adding space between the list items */
+.header ul li {
+    margin-inline: 5%;
 
-        }
-        /* styling the anchor elements of the header */
-        .header ul li a {
-            color: white;
-            text-decoration: none;
-            display: inline-block;
-        }
+}
+/* styling the anchor elements of the header */
+.header ul li a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
 
-        /* styling the main */
-        .main {
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            height: 80%;
-        }
+/* styling the main */
+.main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 80%;
+}
 
-        /* styling the sidebar */
-        .main .sidebar {
-            width: 30%;
-        }
+/* styling the sidebar */
+.main .sidebar {
+    width: 25%;
+}
 
-        .sidebar ul  {
-            list-style-type: none;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            padding-left: 10%;
-        }
+.sidebar ul  {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-left: 10%;
+}
 
-        .sidebar ul li a {
-            text-decoration: none;
-            color: black;
-        }
+.sidebar ul li a {
+    text-decoration: none;
+    color: black;
+}
 
-        /* creating space between the icons and text in the <a> elements */
-        .sidebar ul li a i {
-            padding-inline-end: 3%;
-            font-size: 0.8em;
-        }
+/* creating space between the icons and text in the <a> elements */
+.sidebar ul li a i {
+    padding-inline-end: 3%;
+    font-size: 0.8em;
+}
 
-        /* styling the articles */
-        .articles {
-            display:flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            width: 70%;
-            height: 100%;
-            padding-inline: 2%;
-            padding-block: 2%;
-            font-size: .8em;
-        }
+/* styling the articles */
+.articles {
+    display:flex;
+    flex-wrap: wrap;
+    width: 75%;
+    height: 100%;
+    padding-inline: 2%;
+    padding-block: 2%;
+    font-size: .8em;
+}
 
-        /*styling the .article divs */
-        .article {
-            width: 25%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            
-        }
-        
-        /* styling the first p in .article */
-        .article p {
-            border-bottom: 1px solid lightgray;
-        }
+/*styling the .article divs */
+.articles .article {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  
+    padding-inline: 1%; 
+    flex-basis: 25%;
+    flex-grow: 1;
 
-        /*styling .footer*/
-        .footer {
-            height: 10%;
-            background-color: black;
-            color: white;
-        }
+}
 
-        /* styling the .footer p */
-        .footer p {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding-block: 1%;
-        }
+.articles .article:hover {
+    outline: 1px solid blue;
+    border-radius: 5px;
+}
 
-        
-        
+/* styling the first p in .article */
+.articles .article > p:first-of-type{
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 2%;
+}
+
+.articles .article .comment .name {
+    font-weight: bold;
+    font-size: 0.9em;
+    
+}
+/*styling .footer*/
+.footer {
+    height: 10%;
+    background-color: black;
+    color: white;
+}
+
+/* styling the .footer p */
+.footer p {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 1%;
+}
+
+
+@media (max-width: 700px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .main .sidebar {
+        width: 100%;
+        height: 20%;
+    }
+
+    .articles {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .articles .article {
+        width: 100%;
+        height: 25%;
+    }   
+
+}
+
+
+
 

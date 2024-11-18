@@ -1,0 +1,120 @@
+part 1:
+------------
+1.
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+2.
+<ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
+
+3.
+<a href="https://www.example.com " target="_blank"></a>
+
+4.
+<form action="">
+    <input type="text">
+    <input type="password" name="" id="">
+    <button type="submit">
+</form>
+
+---------------------------------------------------
+part 2:
+
+1.
+
+h1 {
+    font-size: 24px;
+    color: blue;
+    text-align: center;
+}
+
+2. id and class serve a similar purpose they help target specific elements
+when styling with css. the main difference is that a unique id can only be 
+given to a single element but a class can be shared by multiple elements
+
+3.
+
+div {
+    background-color: lightgray;
+}
+
+---------------------------------------------------
+part 3:
+
+1.
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+2.
+flex: 1 1 auto is a shorthand for flex-grow: 1; flex-shrink: 1; and
+flex-basis: auto;
+flex-grow and shrink control the ratio by which an element grows or shrinks
+depending on the screen size relative to its sibling flex elements
+flex-basis is simply the initial size that this element takes up when it 
+has enough space to not grow nor shrink
+
+3.
+i have no idea
+i think justify controls the space between the items while align simply 
+positions them in different ways???
+
+----------------------------------------------------
+part 4:
+
+1.
+
+.container {
+    position: relative;
+}
+
+element {
+    position: absolute;
+    right: 10px;
+    top: 120px;
+}
+
+2. relative: means its positioned relative to other elements
+   absolute: means its postition doesn't change regardless of other elements
+
+3.
+
+img {
+    float: left;
+}
+
+---------------------------------------------------
+part 5:
+
+1. 
+@media (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+2.
+min-width: applies style to screens with higher width
+max-width: applies style to screens with lower width
+
+3.
+@media (orientation: portrait) {
+    element {
+        display: none;
+    }
+}

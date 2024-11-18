@@ -1,0 +1,15 @@
+Q2.
+
+Q3. A
+
+Q4. A
+
+Q5. C
+
+Q6. A
+
+Q7. D
+
+Q8. @media (min-wdith: 600px) and (max-width: 1200px) {
+    style
+}
