@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Fit Demo</title>
+    <style>
+        .container {
+            width: 300px;
+            height: 200px;
+            border: 2px solid black;
+            overflow: hidden;
+        }
+        .fill {
+            object-fit: fill;
+            width: 100%;
+            height: 100%;
+        }
+        .cover {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h2>Object Fit: Fill</h2>
+    <div class="container">
+        <img src="./scene with cub.jpg" alt="Placeholder" class="fill">
+    </div>
+
+    <h2>Object Fit: Cover</h2>
+    <div class="container">
+        <img src="./scene with cub.jpg" alt="Placeholder" class="cover">
+    </div>
+</body>
+</html>
