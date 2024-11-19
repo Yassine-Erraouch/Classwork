@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo5</title>
+    <style type="text/css">
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,1fr);
+            gap: 10px;
+            grid-template-areas: 
+            "header header header"
+            "sidebar main main"
+            "footer footer footer";
+        }
+
+        .grid-container > div {
+            background-color: aliceblue;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .header {
+            grid-area: header;
+        }
+        .sidebar {
+            grid-area: sidebar;
+        }
+        .main {
+            grid-area: main;
+        }
+        .footer {
+            grid-area: footer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header">header</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="main">Main content</div>
+        <div class="footer">Footer</div>
+        
+    </div>
+</body>
+</html>

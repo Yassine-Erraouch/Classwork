@@ -1,0 +1,21 @@
+Q2.
+    @font-face {
+        font-family: 'font1.ttf';
+        src: url('c:/font1.ttf') format('ttf');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+Q3. A
+
+Q4. A
+
+Q5. C
+
+Q6. A
+
+Q7. D
+
+Q8. @media (min-wdith: 600px) and (max-width: 1200px) {
+    style
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pattern3</title>
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 200px);
+            grid-template-rows: repeat(5, 120px);
+            gap: 10px;
+            grid-template-areas: 
+            "header header header header"
+            "A B C D"
+            "A E C F"
+            "G H I F"
+            "footer footer footer footer";
+        }
+
+
+        .grid-container > div {
+            background-color: gray;
+            color: white;
+            text-align: left;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .header {
+            grid-area: header;
+        }
+
+        .block-A {
+            grid-area: A;
+        }
+
+        .block-B {
+            grid-area: B;
+        }
+
+        .block-C {
+            grid-area: C;
+        }   
+
+        .block-D {
+            grid-area: D;
+        }   
+
+        .block-E {
+            grid-area: E;
+        }
+
+        .block-F {
+            grid-area: F;
+        }
+
+        .block-G {
+            grid-area: G;
+        }
+
+        .block-H {
+            grid-area: H;
+        }   
+
+        .block-I {
+            grid-area: I;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+        
+
+        @media (max-width: 320px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(8, 1fr);
+                gap: 10px;
+                grid-template-areas: 
+                "header header"
+                "A B"
+                "A C"
+                "D C"
+                "E F"
+                "G F"
+                "H I"
+                "footer footer"
+            }
+        }
+    </style>
+</head>
+<body>
+     <div class="grid-container">
+        <div class="header">header</div>
+        <div class="block-A">block-A</div>
+        <div class="block-B">block-B</div>
+        <div class="block-C">block-C</div>
+        <div class="block-D">block-D</div>
+        <div class="block-E">block-E</div>
+        <div class="block-F">block-F</div>
+        <div class="block-G">block-G</div>
+        <div class="block-H">block-H</div>
+        <div class="block-I">block-I</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>

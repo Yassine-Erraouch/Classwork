@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo5 Pattern2</title>
+    <style type="text/css">
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(8, 120px);
+            gap: 10px;
+            grid-template-areas: 
+            "header header header"
+            "main main main"
+            "main main main"
+            "main main main"
+            "main main main"
+            "block-A block-B block-C"
+            "footer footer footer";
+        }
+
+        .header {
+            grid-area: header;
+        }
+
+        .block-A {
+            grid-area: block-A;
+        }
+
+        .block-B {
+            grid-area: block-B;
+        }
+
+        .block-C {
+            grid-area: block-C;
+        }
+
+        .main {
+            grid-area: main;
+        }
+
+        .footer {   
+            grid-area: footer; 
+        }
+
+        .grid-container > div {
+            background-color: gray;
+            text-align: center;
+            padding: 20px 0;
+            border-radius: 5px;
+            color: white;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+                grid-template-rows: 8;
+                grid-template-areas: 
+                "header"
+                "main"
+                "main"
+                "block-A"
+                "block-B"
+                "block-C"
+                "footer";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header">header</div>
+        <div class="block-A">block-A</div>
+        <div class="block-B">block-B</div>
+        <div class="block-C">block-C</div>
+        <div class="main">main</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>
