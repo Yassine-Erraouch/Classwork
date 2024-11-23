@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <title>Document</title>
+    <style>
+        .no-shadow {
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card border border-2 border-primary w-100">
+            <div class="card-header">
+                <div class="row">
+                    <p class="col text-center h3 py-2">Enregistrer un nouvel apprenant</p>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="form">
+
+                    <!-- first row -->
+                    <div class="row d-flex gap-2 my-2">
+                        <!-- first column -->
+                         <div class="col">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text border-0 bg-transparent">
+                                        <i class="bi bi-person-vcard-fill text-primary"></i>
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Votre identifiant">
+                            </div>
+                         </div>
+                        <!-- <div class="col">
+                            <div class="icon">
+                                <i class="bi bi-person-vcard-fill text-primary"></i>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Votre identifiant">
+                        </div> -->
+
+                        <!-- second column -->
+                        <div class="col">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text border-0 bg-transparent">
+                                        <i class="bi bi-person-fill text-primary"></i>
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Votre prénom">
+                            </div>
+                         </div>
+                        <!-- <div class="col">
+                            <div class="icon">
+                                <i class="bi bi-person-fill"></i>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Votre prénom">
+                        </div> -->
+
+                        <!-- third column -->
+                        <div class="col">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text border-0 bg-transparent">
+                                        <i class="bi bi-people-fill text-primary"></i>
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Votre nom">
+                            </div>
+                         </div>
+                        <!-- <div class="col">
+                            <div class="icon">
+                                <i class="bi bi-people-fill"></i>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Votre nom">
+                        </div> -->
+                    </div>
+
+                    <!-- second row -->
+                     <div class="row">
+                        <div class="col">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text border-0 bg-transparent">
+                                        <i class="bi bi-at text-primary"></i>
+                                    </span>
+                                </div>
+                                <input type="email" class="form-control" placeholder="Email@gmail.com">
+                            </div>
+                         </div>
+                        <!-- first column -->
+
+                         <!-- <div class="col">
+                            <div class="icon">
+                                <i class="bi bi-at"></i>
+                            </div>
+                            <input type="email" class="form-control" placeholder="Email@gmail.com">
+                         </div> -->
+                         
+
+                          <!-- second column -->
+                          <div class="col">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text border-0 bg-transparent">
+                                        <i class="bi bi-cake2-fill text-primary"></i>
+                                    </span>
+                                </div>
+                                <input type="date" class="form-control" placeholder="jj/mm/aaaa">
+                            </div>
+                         </div>
+                          <!-- <div class="col">
+                            <div class="icon">
+                                <i class="bi bi-cake2-fill"></i>
+                            </div>
+                            <input type="date" class="form-control" placeholder="jj/mm/aaaa">
+                         </div> -->
+
+                        <!-- third column -->
+                        <div class="row">
+                            <div class="col">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text border-0 bg-transparent">
+                                            <i class="bi bi-gender-female text-primary"></i>
+                                        </span>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="sex" id="homme">
+                                        <label class="form-check-label" for="homme">
+                                            Homme
+                                        </label>
+                                        <input class="form-check-input" type="radio" name="sex" id="femme">
+                                        <label class="form-check-label" for="femme">
+                                            Femme
+                                        </label>
+                                    </div>
+                                </div>
+                             </div>
+                         <!-- <div class="col">
+                            <div class="icon">
+                                <i class="bi bi-gender-female"></i>
+                            </div>
+                            <div class="form-check from-check-inline">
+                                <input class="form-check-input" type="radio" name="homme" id="homme">
+                                <label class="form-check-label" for="homme">
+                                    Homme
+                                </label>
+                                <input class="form-check-input" type="radio" name="femme" id="femme">
+                                <label class="form-check-label" for="femme">
+                                    Femme
+                                </label>
+                            </div>
+                         </div> -->
+                     </div>
+
+                     <!-- third row -->
+                      <div class="row">
+
+                        <!-- first column -->
+                        <div class="col">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text border-0 bg-transparent">
+                                        <i class="bi bi-house-door-fill text-primary"></i>
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Saisir votre adresse">
+                            </div>
+                         </div>
+                        <!-- <div class="col">
+                           <div class="icon">
+                                <i class="bi bi-house-door-fill"></i>
+                           </div>
+                           <input type="text" class="form-control">
+                        </div> -->
+
+                        <!-- second column -->
+                         <div class="col">
+                            <div class="icon">
+                                <i class="bi bi-globe-europe-africa"></i>
+                            </div>
+                            <select name="country" id="country" class="form-select">
+                                <option value="default" selected>Selectioner votre pays</option>
+                                <option value="france">France</option>
+                                <option value="espagne">Espagne</option>
+                                <option value="italie">Italie</option>
+                                <option value="belgique">Belgique</option>
+                                <option value="allemagne">Allemagne</option>
+                                <option value="mexique">Mexique</option>
+                                <option value="maroc">Maroc</option>
+                            </select>
+                         </div>
+                      </div>
+
+                      <!-- fourth row -->
+                       <div class="row">
+
+                        <!-- first column -->
+                        <div class="col">
+                            <div class="icon">
+                                <i class="bi bi-key-fill"></i>
+                            </div>
+                            <input type="password" class="form-control" placeholder="Mot de passe">
+                        </div>
+
+                        <!-- second column -->
+                        <div class="col">
+                            <div class="icon">
+                                <i class="bi bi-arrow-counterclockwise"></i>
+                            </div>
+                            <input type="password" class="form-control" placeholder="Confirmer le mot de passe">
+                        </div>
+
+                        <!-- third column -->
+                        <div class="col">
+                            <div class="icon">
+                                <i class="bi bi-journal-bookmark-fill"></i>
+                            </div>
+                            <select name="" id="level" class="form-select">
+                                <option value="default" selected>Selectioner votre niveau</option>
+                                <option value="1">Niveau 1</option>
+                                <option value="2">Niveau 2</option>
+                                <option value="3">Niveau 3</option>
+                                <option value="4">Niveau 4</option>
+                            </select>
+                        </div>
+
+                       </div>
+
+                       <!-- separator -->
+                       <div class="row">
+                           <div class="col-12">
+                               <hr class="text-primary border-4 rounded">
+                           </div>
+                       </div>
+
+                       <!-- buttons -->
+                        <div class="row">
+
+                            <div class="col-8">
+                                <button type="submit" class="btn btn-primary w-100">Envoyer</button>
+                            </div>
+
+                            <div class="col-4">
+                                <button type="reset" class="btn btn-danger w-100">Effacer</button>
+                            </div>
+                        </div>
+
+
+                       
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
