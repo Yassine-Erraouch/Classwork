@@ -4,261 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     <title>Document</title>
+    <style type="text/css">
+        .bg-bluegradient {
+            background: linear-gradient(to right, #3fb0ea 35%, #3559b1);
+        }
+        
+    </style>
 </head>
 <body>
-    <div class="container">
-        <table class="table">
-            <thead>
-                <th class="bg-primary w-100"></th>
-                <th class="bg-primary w-100"></th>
-                <th class="bg-primary w-100"></th>
-                <th class="bg-primary w-100"></th>
-                <th class="bg-primary w-100"></th>
-                <th class="bg-primary w-100"></th>
-                <th class="bg-primary w-100"></th>
-            </thead>
-            <thead>
-                <tr>
-                    <th>
-                        <input type="checkbox" name="checkbox" id="" class="form-check-input">
-                    </th>
-                    <th>
-                        <p>First Name</p>
-                    </th>
-                    <th>
-                        <p>Last Name</p>
-                    </th>
-                    <th>
-                        <p>Username</p>
-                    </th>
-                    <th>
-                        <p>Username</p>
-                    </th>
-                    <th>
-                        <p>Username</p>
-                    </th>
-                </tr>
-            </thead>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-sm bg-bluegradient text-light justify-content-between">
+            <div class="navbar-nav d-flex gap-2">
+                <i class="fa-brands fa-windows border border-2 rounded-circle p-2"></i>
+                <i class="fa-solid fa-table-columns border border-2 rounded-circle p-2"></i>
+            </div>
 
-            <tbody class="overflow-auto">
-                <tr>
-                    <td>
-                        <input type="checkbox" name="checkbox" id="" class="form-check-input">
-                    </td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                </tr>
+            <p class="navbar-nav">Table name</p>
 
-                <tr>
-                    <td>
-                        <input type="checkbox" name="checkbox" id="" class="form-check-input">
-                    </td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                </tr>
+            <div class="navbar-nav d-flex gap-2 ms-4">
+                <i class="fa-solid fa-pen border border-2 rounded-circle p-2""></i>
+                <i class="fa-solid fa-xmark border border-2 rounded-circle p-2""></i>
+                <i class="fa-solid fa-circle-info border border-2 rounded-circle p-2""></i>
+            </div>
+        </nav>
+    </div>
 
-                <tr>
-                    <td>
-                        <input type="checkbox" name="checkbox" id="" class="form-check-input">
-                    </td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                </tr>
+    <div class="container-fluid">
+        <div class="container-fluid">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                &nbsp;frist name
+                            </div>
+                        </th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Website</th>
+                    </tr>
+                </thead>
+    
+                <tbody>
+                    <tr>
+                        <td>
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                &nbsp;Jordan
+                            </div>
+                        </td>
+                        <td>Parker</td>
+                        <td>@jparker</td>
+                        <td>jparker@me.com</td>
+                        <td>0000-000-000</td>
+                        <td>jparker.com</td>
+                    </tr>
+    
+                    <tr>
+                        <td>
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                &nbsp; Emma
+                            </div>
+                        </td>
+                        <td>Stone</td>
+                        <td>@estone</td>
+                        <td>estone@example.com</td>
+                        <td>1111-111-111</td>
+                        <td>estone.com</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                &nbsp; Liam
+                            </div>
+                        </td>
+                        <td>Smith</td>
+                        <td>@lsmith</td>
+                        <td>lsmith@example.com</td>
+                        <td>2222-222-222</td>
+                        <td>lsmith.com</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                &nbsp; Ava
+                            </div>
+                        </td>
+                        <td>Johnson</td>
+                        <td>@ajohnson</td>
+                        <td>ajohnson@example.com</td>
+                        <td>3333-333-333</td>
+                        <td>ajohnson.com</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                &nbsp;Noah
+                            </div>
+                        </td>
+                        <td>Williams</td>
+                        <td>@nwilliams</td>
+                        <td>nwilliams@example.com</td>
+                        <td>4444-444-444</td>
+                        <td>nwilliams.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="container-fluid d-flex justify-content-">
+            <select name="rows" id="rows" class="form-select bg-transparent border-0 border-bottom w-25 h-25">
+                <option value="10">10 rows</option>
+                <option value="25">25 rows</option>
+                <option value="50">50 rows</option>
+                <option value="100">100 rows</option>
+            </select>
 
-                <tr>
-                    <td>
-                        <input type="checkbox" name="checkbox" id="" class="form-check-input">
-                    </td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="checkbox" name="checkbox" id="" class="form-check-input">
-                    </td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="checkbox" name="checkbox" id="" class="form-check-input">
-                    </td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="checkbox" name="checkbox" id="" class="form-check-input">
-                    </td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="checkbox" name="checkbox" id="" class="form-check-input">
-                    </td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="checkbox" name="checkbox" id="" class="form-check-input">
-                    </td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="checkbox" name="checkbox" id="" class="form-check-input">
-                    </td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="checkbox" name="checkbox" id="" class="form-check-input">
-                    </td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="checkbox" name="checkbox" id="" class="form-check-input">
-                    </td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="checkbox" name="checkbox" id="" class="form-check-input">
-                    </td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="checkbox" name="checkbox" id="" class="form-check-input">
-                    </td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="checkbox" name="checkbox" id="" class="form-check-input">
-                    </td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="checkbox" name="checkbox" id="" class="form-check-input">
-                    </td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="checkbox" name="checkbox" id="" class="form-check-input">
-                    </td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="checkbox" name="checkbox" id="" class="form-check-input">
-                    </td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                    <td>@motto</td>
-                </tr>
-            </tbody>
-        </table>
+            <ul class="pagination ms-auto mt-1">
+                <li class="page-item"><a class="page-link text-dark bg-transparent border-0" href="#">First</a></li>
+                <li class="page-item"><a class="page-link text-dark bg-transparent border-0" href="#"><<</a></li>
+                <li class="page-item"><a class="page-link text-dark bg-transparent border-0" href="#">1</a></li>
+                <li class="page-item"><a class="page-link text-dark bg-transparent border-0" href="#">2</a></li>
+                <li class="page-item"><a class="page-link text-dark bg-transparent border-0" href="#">3</a></li>
+                <li class="page-item"><a class="page-link text-dark bg-transparent border-0" href="#">>></a></li>
+                <li class="page-item"><a class="page-link text-dark bg-transparent border-0" href="#">Last</a></li>
+            </ul>
+        </div>
     </div>
 
 
