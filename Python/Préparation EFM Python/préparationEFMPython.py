@@ -65,7 +65,7 @@ def sauvegarder_csv(films, fileName):
     enrichir_donnees_films(films)
     with open(fileName, 'w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
-        writer.writerow(["Titre", "Genre", "Année", "Recettes","Note moyenne" "Note", "Cat-recettes"])
+        writer.writerow(["Titre", "Genre", "Année", "Recettes","Note moyenne", "Note", "Cat-recettes"])
         for film in films:
             writer.writerow([film["Titre"], film["Genre"], film["Année"], film["Recettes"], film["Note"], film["Cat-recettes"]])
 
