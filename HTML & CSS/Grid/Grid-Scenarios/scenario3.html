@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .container { 
+            display: grid; 
+            
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+            /* auto-fit: try to fit as many grid items as possible into the container, 
+            but if there is not enough space, fit as many as possible and then wrap to the next line
+            minmax(150px, 1fr): items should be at least 150px wide and at most as wide as the 
+            fraction of the free space in the grid container (1fr) that is left after all the other items have been placed */
+            
+            gap: 20px; 
+        } 
+        .item { 
+            background-color: lightpink; 
+            height: 150px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> 
+        <div class="item"></div> 
+        <div class="item"></div> 
+        <div class="item"></div> 
+        <div class="item"></div> 
+        <div class="item"></div> 
+        <div class="item"></div> 
+      </div>
+</body>
+</html>
