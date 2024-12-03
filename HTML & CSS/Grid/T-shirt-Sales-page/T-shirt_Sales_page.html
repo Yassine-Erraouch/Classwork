@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=UnifrakturMaguntia' rel='stylesheet'>
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'UnifrakturMaguntia', sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-areas: 
+            "product-image product-desc"
+        }
+
+        .product-image {
+            grid-area: product-image;
+        }
+
+        .product-desc {
+            grid-area: product-desc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="product-image">
+            <img src="./armor_chest_plate-Photoroom.png" alt="Chest plate armor">
+        </div>
+        <div class="product-desc">
+            <div class="product-name">Ironclad Vestige: The Mythic Armor Chest Plate</div>
+            <div class="product-rating"></div>
+            <div class="product-description">
+                <div class="description">Forged in a forgotten volcanic kingdom, the Ironclad Vestige is a chest plate imbued with ancient power. Its fiery glow and impenetrable metal protect the wearer from all manner of harm, embodying the strength of the earth itself.</div>
+                <div class="features">
+                    <ul>
+                        <li><span class="feature-name">Infernal Resonance</span>: Unleashes shockwaves when struck, knocking back enemies.</li>
+                        <li><span class="feature-name">Abyssal Heat</span>: Grants immunity to fire and heat-based attacks.</li>
+                        <li><span class="feature-name">Titan’s Endurance</span>: Boosts stamina, allowing relentless battle prowess.</li>
+                        <li><span class="feature-name">Soulbound Shield</span>: Heals minor wounds and creates an ethereal defense in danger.</li>
+                        <li><span class="feature-name">Runes of the Forgotten</span>: Grants glimpses of the future for precise strikes and dodges.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="price">300 <i class="fa-solid fa-coins"></i></div>
+            <div class="add-to-cart">
+                <div class="quantity-and-size">
+
+                </div>
+                <button class="add-to-cart">Add to cart</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
