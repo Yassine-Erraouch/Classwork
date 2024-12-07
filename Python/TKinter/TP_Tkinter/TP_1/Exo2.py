@@ -22,11 +22,9 @@ def on_click():
         entry1.delete(0, tk.END)
         entry1.insert(0, "Veuillez entrer un nombre entier")
 
-    divisors = ""
-    for i in range(1, N+1):
-        if N % i == 0:
-            divisors += str(i) + " "
-    label2.config(text = "Diviseurs de N: " + divisors)
+    divisors = [n for n in range(1, N + 1) if N % n == 0]
+
+    label2.config(text = f"les Diviseurs sont {divisors}")
 
 #packing the elements
 label1.grid(row = 0, column = 0)
