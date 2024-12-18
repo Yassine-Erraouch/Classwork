@@ -36,8 +36,8 @@ root.title("Calculatrice de poids idéal")
 root.geometry("400x400")
 
 # Images (utilisation de PIL)
-img_homme = ImageTk.PhotoImage(Image.open("src/homme.png").resize((80, 100)))
-img_femme = ImageTk.PhotoImage(Image.open("src/femme.png").resize((80, 100)))
+img_homme = ImageTk.PhotoImage(Image.open("Python\TKinter\Demos_by_M.Bachti\src\man.png").resize((80, 100)))
+img_femme = ImageTk.PhotoImage(Image.open("Python\TKinter\Demos_by_M.Bachti\src\woman.png").resize((80, 100)))
 
 # Widgets
 tk.Label(root, text="Taille en CM:", font=("Arial", 12)).pack(pady=5)
