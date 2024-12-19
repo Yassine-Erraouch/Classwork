@@ -43,24 +43,24 @@ img_female = ImageTk.PhotoImage(Image.open("Python\TKinter\Tkinter_Practice\src\
 
 #creating the labels and entry fields
 #label for the height input
-height_label = ttk.Label(window, text = "Height in cm:", font = ("Times", 16,"bold"))
+height_label = ttk.Label(window, text = "Height in cm:", font = ("garamond", 16,"bold"))
 height_label.pack(pady=5)
 
 #Entry for the height input
-height_input = ttk.Entry(window, font = ("Times", 12), width= 25)
+height_input = ttk.Entry(window, font = ("garamond", 12), width= 25)
 height_input.pack(pady=5)
 
 #label for the gender
-gender_label = ttk.Label(window, text = "Gender:", font=("Times", 16,"bold"))
+gender_label = ttk.Label(window, text = "Gender:", font=("garamond", 16,"bold"))
 change_gender_btn = ttk.Button(window, image=img_male, command=change_gender, bootstyle="light-outline")
 change_gender_btn.pack(pady=5)
 
 #calculate button
-calculate_btn = ttk.Button(window, text = "Calculate", style="Times.TButton", command= calculate_imc)
+calculate_btn = ttk.Button(window, text = "Calculate", style="garamond.TButton", command= calculate_imc)
 calculate_btn.pack(pady=5)
 
 #label for the weight output
-ideal_weight_label = ttk.Label(window, text = "Ideal weight:", font=("Times", 16,"bold"), foreground="#85c8b5")
+ideal_weight_label = ttk.Label(window, text = "Ideal weight:", font=("garamond", 16,"bold"), foreground="#85c8b5")
 ideal_weight_label.pack(pady=5)
 
 

@@ -26,7 +26,7 @@ def calculate_bmi():
         print('please enter valid values')
 
     output_label.config(text = f"Your BMI is: {bmi:.2f} ")
-    classification_label.config(text= f'{classification}',style="primary.TLabel", foreground=color)
+    classification_label.config(text= f'{classification}', foreground=color)
 
 #---------------------------------------------------------------------------------------
 
