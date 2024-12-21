@@ -32,10 +32,10 @@ class TempConverter:
         
         # creating the celsuis and fahrenheit radio buttons
         self.temp_unit = StringVar()
-        self.celsuis = Radiobutton(self.root, text="Celsuis", variable=self.temp_unit, value="celsuis", font=font_regular)
+        self.celsuis = Radiobutton(self.root, text="Celsuis", variable=self.temp_unit, value="celsuis", font=font_regular, command=self.show_unit)
         self.celsuis.place(relx=0.3, rely=0.5, anchor=CENTER)
         
-        self.fahrenheit = Radiobutton(self.root, text="Fahrenheit", variable=self.temp_unit, value="fahrenheit", font=font_regular)
+        self.fahrenheit = Radiobutton(self.root, text="Fahrenheit", variable=self.temp_unit, value="fahrenheit", font=font_regular, command=self.show_unit)
         self.fahrenheit.place(relx=0.6, rely=0.5, anchor=CENTER)
         # creating the convert button
         self.conver_btn = Button(self.root, text= "Convert", command=self.convert_temp, font=font_regular)
@@ -47,13 +47,12 @@ class TempConverter:
         self.result_label.place(relx=0.5, rely=0.9, anchor=CENTER)
     
     def show_unit(self):
-       if self.fahrenheit:
-           self.temp_initial_unit.set("Fahrenheit")
-       else:
-           self.temp_initial_unit.set("Celsuis")
+        if self.temp_unit.get() == "celsuis":
+            self.temp_initial_unit.set("Celsuis")
+        else:
+            self.temp_initial_unit.set("Fahrenheit")
     def convert_temp(self):
         try:
-            self.show_unit()
             temp = float(self.temp.get())
             if self.temp_unit.get() == "celsuis":
                 fahrenheit = (temp * 9/5) + 32
