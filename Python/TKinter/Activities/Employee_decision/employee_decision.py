@@ -27,7 +27,7 @@ class EmpPerformance:
         self.display_frame = tb.Frame(self.app)
         self.info_frame = tb.Frame(self.app)
         
-        self.display_frame.pack(pady=10, padx=10)
+        self.display_frame.pack(pady=10, padx=10, fill='x')
         self.info_frame.pack_forget()
         
         # creating the treeview
@@ -94,11 +94,17 @@ class EmpPerformance:
         self.prep_cours_entry.grid(row=7, column=1, pady=5, padx=5)
         
         self.calculate_btn = tb.Button(self.info_frame, text="Calculer", command=self.calculate)
-        self.calculate_btn.grid(row=8, column=1, columnspan=2, pady=5, padx=5)
+        self.calculate_btn.grid(row=8, column=0, pady=5, padx=5)
+        
+        self.cancel_btn = tb.Button(self.info_frame, text="Annuler",bootstyle="secondary", command=self.cancel)
+        self.cancel_btn.grid(row=8, column=1, pady=5, padx=5)       
         
         
-        
-        
+    def cancel(self):
+        self.app.geometry("600x400")
+        self.info_frame.pack_forget()
+    
+    
     def show_info(self, event):
         self.app.geometry("600x600")
         self.info_frame.pack()
@@ -136,7 +142,7 @@ class EmpPerformance:
 
         # for employee in self.employees:
         #     self.table.insert("", "end", values=(employee["id"], employee["last_name"], employee["first_name"], employee["note"], employee["decision"]))
-         
+         pass
             
        
         
