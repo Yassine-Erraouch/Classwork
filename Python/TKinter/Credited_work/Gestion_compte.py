@@ -35,7 +35,8 @@ class GestionCompteApp(tb.Window):
         self.title('Gestion des Comptes Bancaires')
         self.geometry("750x520")
         # interface variables
-        self.numero = 1 
+        self.numero = 1
+        self.numero_var = tb.StringVar(value=str(self.numero)) 
         self.type_var = tb.StringVar(value="Courant") 
         self.proprietaire_var = tb.StringVar() 
         self.solde_var = tb.DoubleVar() 
@@ -51,7 +52,7 @@ class GestionCompteApp(tb.Window):
     def creer_widgets(self): 
         # form widgets 
         tb.Label(self, text="Numéro:").grid(row=0, column=0, pady=10) 
-        tb.Label(self, textvariable=tb.StringVar(value=str(self.numero))).grid(row=0, column=1) 
+        tb.Label(self, textvariable=self.numero_var).grid(row=0, column=1) 
         tb.Label(self, text="Propriétaire:").grid(row=1, column=0, pady=10) 
         tb.Entry(self, textvariable=self.proprietaire_var).grid(row=1, column=1) 
         tb.Label(self, text="Solde Initial:").grid(row=2, column=0, pady=10) 
