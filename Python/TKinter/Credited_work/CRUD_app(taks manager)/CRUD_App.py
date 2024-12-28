@@ -133,9 +133,9 @@ class CRUDApp(tb.Window):
         
         
         if status == "To Do" or status == "Ongoing":
-            self.db.create(title, description, priority, status, creation_date, due_date, completion_date="")
+            self.db.create(title, description, priority, status, creation_date, due_date)
         else:
-            self.db.create(title, description, priority, status, creation_date, due_date, completion_date=datetime.now())
+            self.db.create(title, description, priority, status, creation_date, due_date)
         
         self.title_var.set("")
         self.description_var.set("")

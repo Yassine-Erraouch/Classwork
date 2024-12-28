@@ -15,25 +15,24 @@ class DataBaseManager:
             priority TEXT NOT NULL,
             status TEXT NOT NULL,
             creation_date TEXT NOT NULL,
-            due_date TEXT NOT NULL,
-            completion_date TEXT
+            due_date TEXT NOT NULL
         )
         """
         self.conn.execute(query)
         self.conn.commit()
     
-    def create(self, title, description, priority, status, creation_date, due_date, completion_date):
-        query = "INSERT INTO tasks (title, description, priority, status, creation_date, due_date, completion_date) VALUES (?, ?, ?, ?, ?, ?, ?)"
-        self.conn.execute(query, (title, description, priority, status, creation_date, due_date, completion_date))
+    def create(self, title, description, priority, status, creation_date, due_date,):
+        query = "INSERT INTO tasks (title, description, priority, status, creation_date, due_date) VALUES (?, ?, ?, ?, ?, ?)"
+        self.conn.execute(query, (title, description, priority, status, creation_date, due_date))
         self.conn.commit()
     
     def read_all(self):
         query = "SELECT * FROM tasks"
         return self.conn.execute(query).fetchall()
     
-    def update(self, record_id, title, description, priority, status, creation_date, due_date, completion_date):
-        query = "UPDATE tasks SET (title, description, priority, status, creation_date, due_date, completion_date) VALUES (?, ?, ?, ?, ?, ?, ?) WHERE id = ?"
-        self.conn.execute(query, (title, description, priority, status, creation_date, due_date, completion_date, record_id))
+    def update(self, record_id, title, description, priority, status, creation_date, due_date):
+        query = "UPDATE tasks SET (title, description, priority, status, creation_date, due_date) VALUES (?, ?, ?, ?, ?, ?) WHERE id = ?"
+        self.conn.execute(query, (title, description, priority, status, creation_date, due_date, record_id))
         self.conn.commit()
         
     def delete(self, record_id):
