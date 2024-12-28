@@ -122,26 +122,26 @@ class CRUDApp(tb.Window):
         due_date = self.due_date_entry.entry.get()
         creation_date = datetime.now()
         
-        #messagebox.showinfo('info', f'title: {title}, {type(title)}, description: {description} {type(description)}, priority: {priority}, {type(priority)} status: {status},{type(status)} due_date: {due_date}, {type(due_date)} creation_date: {creation_date}, {type(creation_date)}')
+        messagebox.showinfo('info', f'title: {title}, {type(title)}, description: {description} {type(description)}, priority: {priority}, {type(priority)} status: {status},{type(status)} due_date: {due_date}, {type(due_date)} creation_date: {creation_date}, {type(creation_date)}')
         
         
-        if title == "" or priority == "" or status == "" or due_date == "":
-            messagebox.showerror("Error", "Please fill in all the fields.")
-            return
+        # if title == "" or priority == "" or status == "" or due_date == "":
+        #     messagebox.showerror("Error", "Please fill in all the fields.")
+        #     return
         
         
         
         
-        self.db.create(title, description, priority, status, creation_date, due_date)
+        # self.db.create(title, description, priority, status, creation_date, due_date)
    
         
-        self.title_var.set("")
-        self.description_var.set("")
-        self.priority_var.set("")
-        self.status_var.set("")
-        self.due_date_var.set("")
+        # self.title_var.set("")
+        # self.description_var.set("")
+        # self.priority_var.set("")
+        # self.status_var.set("")
+        # self.due_date_var.set("")
         
-        self.populate_treeview() # updates the treeview after adding a new item
+        # self.populate_treeview() # updates the treeview after adding a new item
         
         
         
@@ -163,15 +163,13 @@ class CRUDApp(tb.Window):
            
     def delete_task(self):
         ask_id = simpledialog.askinteger("Update", "Enter the ID of the task you want to update: ")
-        id = ask_id
-        if id is None or id not in [item[0] for item in self.db.read_all()]:
+        id = int(ask_id)
+        if id is None or id not in self.db.read_all():
             messagebox.showerror("Error", "Please enter a valid ID.")    
             return
         else:
-            rep=messagebox.askyesno('confirmation',"are you sur you want to delet ?")
-            if(rep):
-                self.db.delete(id)
-                self.populate_treeview()
+            self.db.delete(id)
+            self.populate_treeview()
  
 app = CRUDApp()
 app.mainloop()
