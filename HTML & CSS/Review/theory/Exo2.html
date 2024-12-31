@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            font-size: 1.2em
+        }
+        li[data-priority="high"] {
+            color: red;
+        }
+
+        li[data-priority="medium"] {
+            color:green;
+        }
+
+        li[data-priority="low"] {
+            color:lightgray;
+        }
+
+
+        ul> li:nth-child(2n) {
+            font-family: "Garamond", serif;
+        }
+
+        ul> li:nth-child(2n+1) {
+            font-family: "Times", sans-serif;
+        }
+
+        ul > li:first-child {
+            font-size: 2em;
+        }
+
+        ul > li:last-child {
+            font-size: 0.8em;
+            text-decoration: wavy underline;
+        }
+
+        ul > li:contains("important") {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li data-priority="high">important item 1</li>
+        <li data-priority="medium">normal item 2</li>
+        <li data-priority="low">unimportant item 3</li>
+        <li data-priority="hihg">Urgent task</li>
+        <li>generique item 5</li>
+        <li data-priority="medium">normal task 6</li>
+        <li>generic task 7</li>
+        <li data-priority="low">unimportant task 8</li>
+        <li>generic task 9</li>
+        <li data-priority="hihg">critical task 10</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,3 @@
+Recreate the image first with native css (flex, grid, or any other method of your choice)
+
+Then recreate the image with bootstrap carousel class.

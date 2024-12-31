@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .circle {
+            border-radius: 50%;
+            width:50px;
+            height:50px;
+            background-color: rgb(255, 104, 49);
+            margin: 50%;
+            animation: move 5s infinite;
+            
+        }
+
+        @keyframes move {
+            0% {
+                scale: 2;
+            }
+            5% {
+                scale: 1;
+            }
+
+            10% {
+                scale: 2;
+            }
+            50% {    
+                scale: 1;
+                translate: 50% 50%;
+                background-color: rgb(255, 104, 49);
+            }
+            100% {
+                translate: 350px 350px;
+                scale: 2;
+                background-color: rgb(81, 224, 182)
+            }
+        }
+
+      
+    </style>
+
+
+</head>
+<body>
+    <div class="circle"></div>
+</body>
+</html>

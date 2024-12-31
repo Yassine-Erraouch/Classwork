@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p { color: blue; }       /* third priority*/
+        .text { color: green; }  /* second priority*/
+        #main { color: red; }    /* first priority*/
+    </style>
+</head>
+<body>
+    <p id="main" class="text">Paragraphe 1</p> 
+    <p class="text">Paragraphe 2</p> 
+    <p>Paragraphe 3</p>
+</body>
+</html>

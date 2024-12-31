@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=EB Garamond' rel='stylesheet'>
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+            font-family: "Garamond", serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+        .gallery {
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            background-color: bisque;
+            width: 50%;
+            gap: 2%;
+            align-items: center;
+            justify-content: center;
+            padding: 2%;
+            border-radius: 10px
+        }
+
+        img {
+            object-fit: contain;
+            max-width: 30%;
+            border-radius: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            margin: auto;
+            margin-bottom: 2%;
+            padding: 2%;
+            border-radius: 10px;
+            background-color: #e9dbad;
+            border: none;
+        }
+
+        a:active + .gallery {
+           visibility: hidden;
+        }
+
+        @keyframes hide{
+            from {opacity: 1;}
+            to {opacity: 0;}
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#">Hide/Show</a>
+        <div class="gallery">
+            <img src="./images for exo6/bouquet 1.jpg" alt="">
+            <img src="./images for exo6/bouquet 2.png" alt="">
+            <img src="./images for exo6/bouqet 3.png" alt="">
+        </div>
+    </div>
+   
+   
+</body>
+</html>

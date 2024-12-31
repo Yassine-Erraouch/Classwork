@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=EB Garamond' rel='stylesheet'>
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+            font-family: "Garamond", serif;
+        }
+
+        body {
+            background-color: antiquewhite;
+        }
+
+        .header {
+            background-color:rgb(216, 182, 182);
+            min-height: 2vh;
+            width: 100%;
+        }
+
+        .links {
+            list-style: none;
+            margin-top: -1vh;
+            padding: 2vh;
+            font-size: 1.2em;
+            position: relative;
+        }
+
+        .link  a {
+            text-decoration: none;
+            color: black;
+            transition: transform 0.3s ease;
+        }
+
+        .link > a:hover {
+            transform: scale(1.2);
+        }
+
+        .link > a:active {
+            transform: rotate(180deg);
+        }
+
+        link {
+            position: absolute;
+            top: 2%
+        }
+
+        l1 {
+            left: 10%
+        }
+
+        l2 {
+            left: 30%
+        }
+
+        l3 {
+            left: 30%
+        }
+
+        
+    
+    </style>
+</head>
+<body>
+    <div class="header">
+        <ul class="links">
+            <li class="link l1"><a href="#">Home</a></li>
+            <li class="link l2"><a href="#">Services</a></li>
+            <li class="link l3"><a href="#">About</a></li>
+        </ul>
+    </div>
+</body>
+</html>
