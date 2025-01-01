@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    font-family: "EB Garamond", 'Times New Roman', Times, serif;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 0;
+    padding-inline: 10%;
+    background-color: antiquewhite;
+    text-align: center;
+}
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    gap: 2vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vh;
+    width: 100%;
+}
+
+/* creating the style for the cards */
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    padding: 2%;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.02)
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card-text {
+    padding-inline: 5%;
+}
+
+.card-img {
+    object-fit: contain;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    width: 95%;
+    align-items:center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.quote {
+    margin: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;    
+}
+
+.quote q {
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding-block: 0;
+    padding-inline: 2%;
+    gap: 20px;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 15%;
+    gap: 5px;
+}
+
+.form-item input, .form-item textarea {
+    width: 100%;
+
+}
+
+.form-item button {
+    width: 100%;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding-block: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
