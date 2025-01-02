@@ -23,6 +23,21 @@
     position: relative;
     font-weight: bold;
     transition: all 0.3s ease-in-out;
+}
+
+.container .skill:first-child{
+    --color: attr(data-color);
+}
+
+.container .skill:nth-of-type(2){
+    --color: attr(data-color);
+}
+
+.container .skill:nth-of-type(3){
+    --color: attr(data-color);
+}
+
+.container .skill:nth-of-type(4){
     --color: attr(data-color);
 }
 
