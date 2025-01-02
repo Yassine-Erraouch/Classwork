@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        button::after {
+            content: "⋆*･ﾟ"; 
+        }
+
+        button::before {
+            content: "☾ ⋆*･";
+        }
+
+        button::after, button::before {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            margin-inline: 10px;
+            font-size: 1.2em;
+            color: midnightblue;
+        }
+
+        button:hover::before, button:hover::after {
+            opacity: 1;
+        }
+
+        button {
+            background-color: lightcoral;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+        }
+
+        div.container {
+            display: flex;
+            justify-content: center;
+            margin-block: 45%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button>Cliquez-moi!</button>
+    </div>
+   
+</body>
+</html>

@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+    font-family: "arial";
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f4f4f9;
+}
+
+.container .skill {
+    background-color: white;
+    width: 50%;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #080808a5;
+    position: relative;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    --color: attr(data-color);
+}
+
+.skill:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    opacity:  1;
+}
+
+.skill::after {
+    content: attr(data-p);
+    border-radius: 10px;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 40px;
+    height: 20px;
+    transition: all 0.8s ease-in-out .2s;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8em;
+}
+
+.react::after {
+    background-color: #61DAFB;
+    content:"80%";
+}
+
+.laravel::after {
+    background-color: #ff2d20;
+    content:"65%";
+    color: white;
+}
+
+.next::after {
+    background-color: #000000;
+    content:"70%";
+    color: white;
+}
+
+
+.node::after {
+    background-color: #68a063;
+    content:"50%";
+    color: white;
+}
+
+.skill:hover::after {
+   
+    opacity: 1;
+}

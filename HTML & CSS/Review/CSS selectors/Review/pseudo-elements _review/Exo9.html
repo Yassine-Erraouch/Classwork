@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-inline: auto;
+            margin-top: 30%;
+            width:  300px;
+            height: 300px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        img {
+            object-fit: contain;
+            width: 100%;
+            border-radius: 10px;
+            position: relative;
+            display: block;
+        }
+
+        img::before {
+            width: 110%;
+            height: 110%;
+            opacity: 0;
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            background-color: salmon;
+            border-radius: 10px;
+        }
+
+        img::after {
+            width:110%;
+            height: 110%;
+            opacity: 0;
+            content: "";
+            position: absolute;
+            outline: 3px solid aliceblue;
+        }
+
+        img::after, img::before {
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        img:hover::before, img:hover::after {
+            opacity: 1;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="./wizard orb.jpg" alt="">
+    </div>
+</body>
+</html>

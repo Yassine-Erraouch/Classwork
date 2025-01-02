@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        div.container {
+            display: flex;
+            justify-content: center;
+            margin-inline: auto;
+            margin-top: 30%;
+            background-color: aliceblue;
+            width:  300px;
+            height: 300px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+        
+        span {
+            position: relative;
+            color: black;
+        }
+
+        span::before {
+            content: "";
+            position: absolute;
+            left: -5px;
+            height: 100%;
+            width: 0%;
+            background-color: rgba(255, 255, 0, 0.289);
+            transition: width 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        span:hover::before {
+            width: 110%;
+        }
+
+        span:hover {
+           color:gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span>Oh, great Heavens! 👀</span>
+    </div>
+</body>
+</html>

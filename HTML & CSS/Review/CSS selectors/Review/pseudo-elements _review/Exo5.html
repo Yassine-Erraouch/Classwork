@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+    <title>Document</title>
+    <style type="text/css">
+        div.container {
+            display: flex;
+            justify-content: center;
+            margin-block: 45%;
+            font-family: "Oswald", serif;
+            background-color: #F5ECD5;
+            padding: 10px;
+            border-radius: 10px;
+            flex-direction: column;
+            position: relative;
+        }
+
+        blockquote::before {
+            content: "❝";
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 10px;
+        }
+
+        blockquote::after {
+            content: "❞";
+            position: absolute;
+            bottom: 0;
+            right: 5%;
+        }
+
+        blockquote::before, blockquote::after {
+            font-size: 2em;
+            color: #3D3D3D;
+            margin: 10px;
+        }
+
+        blockquote  {
+            font-size: 1.5em;
+            padding: 10px;
+        }
+
+        .container h3 {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin-inline: 10px;
+            margin-bottom: 5px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <blockquote>Social media made y'all way too comfortable with disrespecting people and not getting punched in the face for it.
+        </blockquote>
+        <h3>-Mike Tyson</h3>
+    </div>
+</body>
+</html>

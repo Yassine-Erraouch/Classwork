@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        div.container {
+            display: flex;
+            justify-content: center;
+            margin-block: 45%;
+        }
+
+        div.card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2%;
+            border-radius: 10px;
+            width: 30%;
+            box-shadow: 0 0 10px #080808a5;
+            gap: 10px;
+            position: relative;
+        }
+
+        div .card .card-img {
+            object-fit: contain;
+            width: 95%;
+            border-radius: 10px;
+        }
+
+        div .card .card-title {
+            text-align: center;
+            font-size: 1.3em;
+            margin: 10px;
+        }
+
+        .card::after {
+            content: "New";
+            background-color: #059998;
+            padding: 10px;
+            border-radius: 15px;
+            color: #fff;
+            position: absolute;
+            top: -10px;
+            right: -20px;
+            font-size: 1.3em;
+            box-shadow: 0 0 10px #059998;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="./wizard orb.jpg" alt="wizard's orb" class="card-img">
+            <div class="card-title">Merlin's magical orb</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        div.container {
+            display: flex;
+            justify-content: center;
+            margin-block: 45%;
+        }
+
+        div.card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2%;
+            border-radius: 10px;
+            width: 30%;
+            box-shadow: 0 0 10px #f2660f;
+        }
+
+        div .card .card-img {
+            object-fit: contain;
+            width: 95%;
+            border-radius: 10px;
+        }
+
+        div .card .card-title {
+            text-align: center;
+        }
+
+        div .card .card-link {
+            text-decoration: none;
+            color: #479297;
+            position: relative;
+        }
+
+        .card-link::after {
+            content: "___________";
+            opacity: 0;
+            color: #479297;
+            position: absolute;
+            top: 50%;
+            left: -6%;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .card-link:hover::after {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="/HTML & CSS/Review/practice/images/critical thinking.jpeg" alt="" class="card-img">
+            <h3 class="card-title">Unlock the power of your brain</h3>
+            <a href="" class="card-link">Learn More</a>
+        </div>
+    </div>
+</body>
+</html>

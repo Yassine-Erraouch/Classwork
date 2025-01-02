@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    font-family: "arial";
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f4f4f9;
+}
+
+.container .task {
+    background-color: white;
+    width: 55%;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #080808a5;
+    position: relative;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.task:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.task::after {
+    content: "";
+    border-radius: 10px;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 67px;
+    height: 20px;
+    transition: all 0.8s ease-in-out .2s;
+}
+
+.t1::after {
+    background-color: #ff2d20;
+    content:"Urgent";
+    font-size: 0.8em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    color: white;
+
+}
+
+.t2::after {
+    background-color: #f39c12;
+    content:"Important";
+    font-size: 0.8em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    color: white;
+
+}
+
+.t3::after {
+    background-color: #61DAFB;
+    content:"Medium";
+    font-size: 0.8em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    opacity: 0;
+
+}
+
+
+
+.t4::after {
+    background-color: #68a063;
+    content:"Low";
+    font-size: 0.8em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    opacity: 0;
+
+}
+
+.t5::after {
+    background-color: gray;
+    content:"Done";
+    font-size: 0.8em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    opacity: 0;
+
+}
+
+.task:hover::after {
+   
+    opacity: 1;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        div.container {
+            display: flex;
+            justify-content: center;
+            margin-block: 45%;
+            font-family: "Oswald", serif;
+            background-color: #F5ECD5;
+            padding: 10px;
+            border-radius: 10px;
+            flex-direction: column;
+            position: relative;
+            font-size: 1.2em;
+            align-items: center;;
+            
+        }
+
+        .container ul {
+            list-style: none;
+        }
+
+        .container ul li {
+            position: relative;
+            margin-block: 10px;
+        }
+
+        .container ul li:first-child::before {
+            content: "✓";
+            
+        }
+
+        .container ul li:nth-child(2)::before {
+            content: "✗";
+            
+        }
+
+        .container ul li:last-child::before {
+            content: "➤";
+            
+        }
+
+        .container ul li::before {
+            margin-right: 10px;
+            margin-block: 0px;
+            position: absolute;
+            left: -20px;
+            top: -2px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+        </ul>
+    </div>
+</body>
+</html>
