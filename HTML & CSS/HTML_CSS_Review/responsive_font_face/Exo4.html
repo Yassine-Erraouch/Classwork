@@ -4,15 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <style type="text/css">
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background-color: #e1f4f3;
+            gap: 10%;
+            margin-inline: 30%;
+            aspect-ratio: 1/1;
+        }
+
+        .gallery-item {
+            aspect-ratio: 4/3;
+            max-width: 400px;
+            object-fit: contain;
+            border-radius
+        }
+
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="gallery">
-            <img src="" alt="" class="gallery-img">
-            <img src="" alt="" class="gallery-img">
-            <img src="" alt="" class="gallery-img">
-            <img src="" alt="" class="gallery-img">
+            <img class="gallery-item" src="../practice/images/adaptability.jpeg" alt="" class="gallery-img">
+            <img class="gallery-item" src="../practice/images/problem-solving.jpeg" alt="" class="gallery-img">
+            <img class="gallery-item" src="../practice/images/empathy.jpeg" alt="" class="gallery-img">
+            <img class="gallery-item" src="../practice/images/team-work.jpeg" alt="" class="gallery-img">
         </div>
     </div>
 </body>

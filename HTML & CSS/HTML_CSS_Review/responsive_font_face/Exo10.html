@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+
+        
+        @font-face {
+            font-family: "Playfair Display";
+            src: url(./Fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf) format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "Playwrite";
+            src: url(./Fonts/PlaywriteAUSA-VariableFont_wght.ttf) format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "Lora";
+            src: url('./Fonts/Lora-VariableFont_wght.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                font-family: "Playwrite", serif;
+            }
+        }
+
+        @media (max-width: 1024px) and (min-width: 601px) {
+            .container {
+                font-family: "Playfair display", serif;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .container {
+                font-family: "Lora", serif;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">The FitnessGram pacer test</h1>
+        <p class="text">he FitnessGram Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. Students begin at the starting line. Once the test begins, the running speed starts slowly, but gets faster each minute after you hear the signal (beep). A single lap (length of the basketball court), should be completed when you hear this signal (ding). The second time you fail to complete a lap before the sound, your test is over.</p>
+    </div>
+</body>
+</html>

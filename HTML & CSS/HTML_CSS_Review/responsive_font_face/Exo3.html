@@ -16,31 +16,55 @@
             gap: 30px;
         }
 
+        .circle-container {
+            width: 301px;
+            outline: yellow solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         .circle {
             border-radius: 50%;
-            min-width: 100px;
+            min-width: 300px;
             aspect-ratio: 1/1;
             background-color: #9172ff;
             
         }
 
+        .square-container {
+            border-radius: 50%;
+            width: 140px;
+            aspect-ratio: 1/1;
+            outline: yellow solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         .square {
             aspect-ratio: 1/1;
-            min-width: 100px;
+            width: 100px;
             background-color: #ff7e7e;
         }
 
 
         .circle, .square {
-            border: 1px solid black;
+          /*  border: 10px solid black; */
             outline: 1px solid black;
+            z-index: 1;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="circle"></div>
-        <div class="square"></div>
+        <div class="circle-container">
+            <div class="circle"></div>
+        </div>
+        
+        <div class="square-container">
+            <div class="square"></div>
+        </div>
     </div>
 </body>
 </html>

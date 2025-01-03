@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            margin: 10px;
+            background-color: #f6e8e4;
+            width: 100%;
+            aspect-ratio: 1/1;
+        }
+
+        @font-face {
+            font-family: "Playfair Display bold";
+            src: url(./Fonts/PlayfairDisplay-VariableFont_wght.ttf) format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: : "Playfair Display regular";
+            src: url(./Fonts/PlayfairDisplay-VariableFont_wght.ttf) format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family:  "Playfair Display italic";
+            src: url(./Fonts/PlayfairDisplay-VariableFont_wght.ttf) format('truetype');
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        .regular {
+            font-family: "Playfair Display regular", 'Times New Roman', Times, serif;
+        }
+
+        .bold {
+            font-family: "Playfair Display bold", 'Times New Roman', Times, serif;
+        }
+
+        .italic {
+            font-family: "Playfair Display italic";
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="regular">Playfair Display Regular</h1>
+        <h1 class="bold">Playfair Display Bold</h1>
+        <h1 class="italic">Playfair Display Italic</h1>
+    </div>
+</body>
+</html>

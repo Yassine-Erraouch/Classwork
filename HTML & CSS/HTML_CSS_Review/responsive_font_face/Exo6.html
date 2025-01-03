@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            margin: 10px;
+            background-color: #f6e8e4;
+            width: 100%;
+            aspect-ratio: 1/1;
+        }
+
+        @font-face {
+            font-family: "Playfair Display";
+            src: url(./Fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf) format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "Playwrite";
+            src: url(./Fonts/PlaywriteAUSA-VariableFont_wght.ttf) format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .title {
+            font-family: "Playfair Display", serif;
+        }
+
+        .container-text {
+            font-family: "Playwrite", sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Big title</h1>
+        <p class="container-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, repellendus.</p>
+    </div>
+</body>
+</html>

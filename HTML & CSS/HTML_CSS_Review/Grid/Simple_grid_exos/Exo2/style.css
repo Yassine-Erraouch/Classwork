@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: #EFE3C2;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 100px, 200px, 1fr, 2fr;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E3F0AF;
+    outline: 1px solid #5DB996;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+}
