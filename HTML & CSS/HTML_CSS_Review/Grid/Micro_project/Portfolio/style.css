@@ -192,3 +192,36 @@ body {
         margin-top: 10px;
     }
 }
+
+/* for tablets */
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    .grid { 
+        grid-template-rows: 20% 80%;
+        grid-template-columns: 1fr;
+        grid-template-areas:]
+        "sidebar"
+        "main";
+    }
+    
+    .grid .sidebar {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .grid .sidebar .logo {
+        top: .5em;
+        left: 1em;
+    }
+
+    .grid .menu {
+        display: none;
+    }
+
+    .grid .menu div {
+        width: 10%;
+        
+    }
+}
