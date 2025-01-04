@@ -1,0 +1,194 @@
+* {
+    box-sizing: border-box;
+}
+/* fonts */
+@font-face {
+    font-family: "Playfair Display";
+    src: url(../fonts/PlayfairDisplay-VariableFont_wght.ttf) format("truetype");
+}
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+/* setting up the grid */
+.grid {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: "sidebar main";
+    height: 100vh;
+    width :100vw;
+}
+
+
+/* styling the sidebar */
+.grid .sidebar {
+    grid-area: sidebar;
+    background-color: #fcfaff;
+    font-family: "Playfair Display", serif;
+    display: flex;
+    flex-direction: column;
+    position: relative;  
+    align-items: center;  
+}  
+
+/* styling the menu items */
+.grid .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 15em;
+    left: 2em;
+}
+
+.grid .menu div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* tweaking the logo */
+.grid .logo {
+    font-size: 1.9em;
+    position: absolute;
+    left: 1.2em;
+    top: 3em;
+}
+
+
+.logo .span {
+    font-family: "Caveat", serif;
+    color: #de4753;
+    font-size: 1.1em
+}
+
+.main {
+    grid-area: main;
+    background-color: #f4f4fe;
+    font-family: "Playfair Display", serif;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+/* the left side of the main container */
+
+.main .content {
+    width: 65%;
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 4%;
+    justify-content: center;}
+
+.main .content .title .span {
+    font-family: "Caveat", serif;
+    color: #de4753;
+}
+
+.main .content .sub-title .span {
+    color: #de4753;
+}
+
+.btn {
+    background-color: #de4753;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    border: none;
+    width: 5em;
+    height: 2.5em;
+    font-size: 1em;
+    text-align: center;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* the right side of the main container */
+.main .image {
+    position: relative;
+    width: 35%;
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 4%;
+    justify-content: center;
+}
+
+
+/* adjusting the image */
+.main .image img {
+    max-width: 95%;
+    max-height: 100%;
+    object-fit: contain;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+}
+
+
+/* adjusting display based on screen sizes */
+/* for mobiles */
+@media (max-width: 600px) {
+    .grid {
+        grid-template-rows: 10% 90%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "sidebar sidebar sidebar"
+        "main main main";
+    }
+
+    .grid .sidebar {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .grid .sidebar .logo {
+        top: .5em;
+        left: 1em;
+    }
+
+    .grid .menu {
+        display: none;
+    }
+
+    .grid .menu div {
+        width: 10%;
+    }
+
+    .grid .main {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .grid .main .image {
+        width: 80%;
+        align-items: center;;
+    }
+
+    .grid .main .content {
+        width: 80%;
+        padding: auto;
+        gap: 10px;
+    }
+
+    .btn {
+        margin: auto;
+        margin-top: 10px;
+    }
+}

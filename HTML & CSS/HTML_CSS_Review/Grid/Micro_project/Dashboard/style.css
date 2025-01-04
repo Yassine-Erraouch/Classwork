@@ -211,6 +211,22 @@ html, body {
     }
 }
 
+@media (max-width: 319px) {
+    .sidebar {
+        display:none;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    .main .card {
+        min-width: 200px;
+        margin-inline: auto;
+        padding-inline: 20px;
+    }
+}
+
 /* computer */
 
 @media screen and (min-width: 1024px) {
