@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            outline: 1px solid lightgray;
+            background-color: white;
+            height: 30%;
+        }
+
+        .card-img {
+            object-fit: contain;
+        }
+
+        .js, .html {
+            max-width: 200px;
+           
+        }
+        .css {
+            max-width: 400px;
+        }
+
+        .card {
+            display: flex;
+            padding: 10px;
+        }
+
+        .card-content {
+            background-color: lightgray;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .card-title {
+            color: rgb(123, 123, 245);
+            margin-top: 5px;
+        }
+
+        @media (min-width: 922px) {
+            .container {
+                flex-direction: row;
+            }
+        }
+
+        @media (max-width: 922px) {
+            .container {
+                flex-direction: column;
+            }
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="card">
+            <div class="card-content">
+                <img src="./images/html logo-Photoroom.png" alt="" class="card-img html">
+            <h3 class="card-title">HTML</h3>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <img src="./images/official-css-logo-Photoroom.png" alt="" class="card-img css">
+            <h3 class="card-title">CSS</h3>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <img src="./images/JavaScript-logo.png" alt="" class="card-img js">
+            <h3 class="card-title">JavaScript</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

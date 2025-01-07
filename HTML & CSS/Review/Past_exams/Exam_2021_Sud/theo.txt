@@ -1,0 +1,59 @@
+1.  Quel est l'attribut à inclure dans la balise BODY pour changer la couleur des liens? 
+    ✓ LINK 
+
+
+2.  Quel est l'attribut à inclure dans la balise BODY pour changer la couleur des liens déjà visités?
+    ✓  VLINK 
+
+
+3.  Que veut dire le mot HTML?
+    ✓ Hyper Text Markup Language  
+
+4.  Quel attribut de la balise établit la couleur de fond d'une page web?
+
+
+5. Parmi les choix suivants, lequel n'est pas un attribut de la balise <BODY> ?
+
+
+6.  La partie HEAD d'un fichier HTML contient ? 
+    ✓ La balise TITLE 
+
+
+7.  Quand vous utilisez la balise <TITLE> où est affiché le texte?
+    ✓ Le titre est affiché dans le haut des navigateurs.
+
+
+8. La majorité des informations d'une page Web se trouve dans:
+    ✓ La balise BODY
+
+9. Que signifie l'attribut BGCOLOR de la balise ?
+    ✓ Couleur de l'arrière plan.
+
+
+10. Quelle balise de style physique te permettra d'avoir du texte en caractères italiques dans tes 
+pages HTML? 
+    ✓ <I>
+
+
+11. Parmi les choix suivants, lequel donne la plus petite taille?
+    ✓ <H6>
+
+
+12. Si vous ne spécifiez aucune police spéciale à utiliser dans<FONT> o quelle police sera 
+utilisée par défaut ?
+    ✓ La police par défaut selon la version du navigateur. 
+
+
+13. Que signifie CSS ?
+    ✓ Cascading Style Sheets 
+
+
+14. A quoi sert le langage CSS ?
+    ✓ A ajouter du style aux documents web
+
+
+15. Dans quoi définit-on les déclarations CSS ?
+    ✓ Entre deux accolades séparés par des points-virgules { ... ; ... } 
+
+16. A quoi sert le sélecteur de classe : h2.nomDeClasse ? 
+    ✓ A définir différentes propriétés pour l'élément <h2> dont la classe est "nomDeClasse".

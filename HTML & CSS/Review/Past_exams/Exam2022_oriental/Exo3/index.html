@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        
+        body > ul.main >li {
+            color: lightblue;
+        }
+
+        body > ul.main > li:first-child {
+            color: #5f7967;
+        }
+
+        body > ul.main > li:nth-child(2) {
+            text-decoration: underline;
+        }
+
+        body > ul > li:last-child {
+            font-style: italic;
+        }
+
+        body ul li::first-letter, body ol li::first-letter {
+            font-weight: bold;
+        }
+
+
+        
+
+    </style>
+</head>
+<body>
+    <ul class="main">
+        <li>A
+            <ol>
+                <li>A1</li>
+                <li>A2</li>
+                <li>A3</li>
+                <li>A4</li>
+            </ol>
+        </li>
+
+        <li>B
+            <ul style="list-style: circle;">
+                <li>B1</li>
+                <li>B2</li>
+            </ul>
+        </li>
+
+        <li>C</li>
+        <li>D
+            <ol style="list-style: upper-roman;">
+                <li>D1</li>
+                <li>D2</li>
+            </ol>
+        </li>
+        <li>E</li>
+        <li>F</li>
+        <li>G</li>
+        
+    </ul>
+</body>
+</html>

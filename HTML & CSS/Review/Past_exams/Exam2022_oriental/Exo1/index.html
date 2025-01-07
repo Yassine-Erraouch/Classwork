@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <fieldset>
+            <legend>Gestion de projets</legend>
+            <form action="#">
+
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label for="id">Numéro de projet :</label>
+                            </td>
+                            <td>
+                                <input type="text" placeholder="Insérer l'id du projet" id="id" required>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>
+                                <label for="name">Nom de projet :</label>
+                            </td>
+    
+                            <td>
+                                <input type="text" id="name" placeholder="Insérer le nom du projet" required>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>
+                                <label for="type">Type de service :</label>
+                            </td>
+    
+                            <td>
+                                <select name="type" id="type" required>
+                                    <option value="1">Analyse et conception</option>
+                                    <option value="2" selected>Développement Web</option>
+                                    <option value="3">test</option>
+                                </select>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>
+                                <label for="date">Date de début :</label>
+                            </td>
+    
+                            <td>
+                                <input type="date" name="date" id="date" placeholder="jj/mm/aaaa" required>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>
+                                <label for="duration">Durée  (enJ/H) :</label>
+                            </td>
+    
+                            <td>
+                                <input type="number" name="duration" id="duration" placeholder="90" style="width: 50%" required>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>
+                                <button type="reset">Réinitaliser</button>
+                                <button type="submit">Valider</button>
+                            </td>
+                        </tr> 
+                    </tbody>
+                </table>
+            </form>
+            
+        </fieldset>
+    </div>
+</body>
+</html>

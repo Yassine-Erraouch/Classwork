@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <fieldset>
+            <legend>Formulaire de demande de passeport</legend>
+            <form action="">
+                <table>
+                    <!-- cin -->
+                    <tr>
+                        <td>
+                            <label for="cin">N° CIN</label>
+                        </td>
+
+                        <td>
+                            <input type="text" name="cin" id="cin" placeholder="Saisir votre n° CIN">
+                        </td>
+                    </tr>
+
+                    <!-- nom -->
+                    <tr>
+                        <td>
+                            <label for="nom">Nom</label>
+                        </td>
+
+                        <td>
+                            <input type="text" name="nom" id="nom" placeholder="Saisir votre nom">
+                        </td>
+                    </tr>
+
+                    <!-- prénom -->
+                    <tr>
+                        <td>
+                            <label for="prenom">Prénom</label>
+                        </td>
+
+                        <td>
+                            <input type="text" name="prenom" id="prenom" placeholder="Saisir votre prenom">
+                        </td>
+                    </tr>
+
+                    <!-- date de naissance -->
+                    <tr>
+                        <td>
+                            <label for="date-naissance">Date de Naissance</label>
+                        </td>
+
+                        <td>
+                            <input type="text" name="" id="date-naissance" placeholder="Jour(JJ)" style="width:10%">
+                            <input type="text" name="" id="date-naissance" placeholder="Mois(MM)" style="width:10%">
+                            <input type="text" name="" id="date-naissance" placeholder="Année(AAAA)" style="width:15.5%">
+                        </td>
+                    </tr>
+
+
+                    <!-- genre -->
+                    <tr>
+                        <td>
+                           Genre
+                        </td>
+
+                        <td>
+                            <label for="masc">Masculin</label>
+                            <input type="radio" name="genre" id="masc" value="Masculin">
+                            <label for="fem">Feminin</label>
+                            <input type="radio" name="genre" id="fem" value="Feminin">
+                        </td>
+                    </tr>
+
+                    <!-- lieu de naisance -->
+                    <tr>
+                        <td>
+                            <label for="lieu-naissance">Lieu de Naissance</label>
+                        </td>
+
+                        <td>
+                            <input type="text" name="lieu-naissance" id="lieu-naissance" placeholder="Saisir votre lieur de naissance">
+                        </td>
+                    </tr>
+
+                    <!-- pays de naissance -->
+                    <tr>
+                        <td>
+                            <label for="pays-naissance">Lieu de Naissance</label>
+                        </td>
+
+                        <td>
+                            <select name="pays-naissance" id="pays-naissance">
+                                <option value="maroc" selected>Maroc</option>
+                                <option value="france">France</option>
+                                <option value="espagne">Espagne</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <!-- numero de teléphone -->
+                    <tr>
+                        <td>
+                            <label for="tele">Numéro de téléphone</label>
+                        </td>
+
+                        <td>
+                            <input type="text" disabled placeholder="+212" style="width:35px;">
+                            <input type="text" id="tele" placeholder="0600-000000">
+                        </td>
+                    </tr>
+
+                    <!-- Photo -->
+                    <tr>
+                        <td>
+                            <label for="photo">Photo de Carte d'identité</label>
+                        </td>
+
+                        <td>
+                            <input type="file" name="photo" id="photo" accept="image/png, image/jpeg">
+                        </td>
+                    </tr>
+
+                    <!-- boutons -->
+                     <tr>
+                        <td>
+                            <button type="submit">Valider</button>
+                            <button type="reset">Annuler</button>
+                        </td>
+                     </tr>
+                </table>
+            </form>
+        </fieldset>
+    </div>
+</body>
+</html>
