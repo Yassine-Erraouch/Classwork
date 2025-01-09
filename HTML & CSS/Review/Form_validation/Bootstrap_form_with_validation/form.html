@@ -7,84 +7,97 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" class="container-fluid d-flex flex-column gap-4 w-75 border rounded-4 p-3 bg-warning bg-opacity-25 my-5">
-        <h1 class="text-center">Validation Formulaire avec Bootstrap 5</h1>
-        <!-- username -->
-        <div class="form-group">
-            <label for="username">Nom d'utilisateur(3-10 caractères)</label>
-            <input type="text" name="" id="username" class="form-control"
-            pattern="[a-zA-Z0-9@_'.]{3,10}" required>
-        </div>
-        <!-- password -->
-        <div class="form-group">
-            <label for="pwd">Mot de passe (minimum 6 caractères)</label>
-            <input type="password" name="" id="pwd" class="form-control"
-            pattern="[a-zA-Z0-9@_!?#$%^&*]{6,}" required>
-        </div>
-        <!-- gender -->
-        <div class="form-group">
-            <label for="gender">Sexe</label>
-            <div class="form-check" id="gender">
-                <input type="radio" class="form-check-label" name="gender" id="male" value="male" class="form-check-input" required>
-                <label for="male">Homme</label>
+    <div class="container-fluid">
+        <form novalidate action="" class="container-fluid d-flex flex-column gap-4 w-50 border rounded-4 p-3 bg-warning bg-opacity-25 my-5 was-validated">
+            <h1 class="text-center text-primary ">Validation Formulaire avec Bootstrap 5</h1>
+            <!-- username -->
+            <div class="form-group">
+                <label for="username">Nom d'utilisateur(3-10 caractères)</label>
+                <input type="text" name="" id="username" class="form-control"
+                pattern="[a-zA-Z0-9@_'.]{3,10}" required>
+                <div class="valid-feedback">Nom d'utilisateur valide</div>
+                <div class="invalid-feedback">Nom d'utilisateur invalide</div>
             </div>
-            
-            <div class="form-check">
-                <input type="radio" class="form-check-label" name="gender" id="female" value="female" class="form-check-input" required>
-                <label for="female">Femme</label>
+            <!-- password -->
+            <div class="form-group">
+                <label for="pwd">Mot de passe (minimum 6 caractères)</label>
+                <input type="password" name="" id="pwd" class="form-control"
+                pattern="[a-zA-Z0-9@_!?#$%^&*]{6,}" required>
+                <div class="valid-feedback">Mot de passe Valide</div>
+                <div class="invalid-feedback">Mot de passe invalide</div>
             </div>
-        </div>
-        <!-- conditions checkbox -->
-        <div class="form-group">
-            <div class="form-check">
-                <input type="checkbox" name="" id="conditions" class="form-check-input" required>
-                <label for="conditions" class="form-check-label">J'accepte les termes et conditions</label>
+            <!-- gender -->
+            <div class="form-group">
+                <label for="gender">Sexe</label>
+                <div class="form-check" id="gender">
+                    <input type="radio" name="gender" id="male" value="male" class="form-check-input" required>
+                    <label for="male" class="form-check-label>Homme</label>
+                </div>
+                
+                <div class="form-check">
+                    <input type="radio"  name="gender" id="female" value="female" class="form-check-input" required>
+                    <label for="female" class="form-check-label">Femme</label>
+                </div>
             </div>
-        </div>
-
-         <!-- message text area -->
-        <div class="form-group">
-            <label for="message">Message</label>
-            <textarea name="" id="message" class="form-control"></textarea>
-        </div>
-
-        <!-- country -->
-        <div class="form-group">
-            <label for="country">Pays</label>
-            <select class="form-select" name="" id="country" required>
-                <option value="default">Sélectionner un pays</option>
-                <option value="Maroc">Maroc</option>
-                <option value="France">France</option>
-                <option value="Espagne">Espagne</option>
-            </select>
-        </div>
-
-        <!-- preferred language -->
-        <div class="form-group">
-            <label for="language">Langue préférée</label>
-            <input class="form-control" list="langues" id="language">
-            <datalist id="langues">
-                <option value="Afrikaans">Afrikaans</option>
-                <option value="Allemand">Allemand</option>
-                <option value="Anglais">Anglais</option>
-                <option value="Arabe">Arabe</option>
-                <option value="Espagnol">Espagnol</option>
-                <option value="Français">Français</option>
-                <option value="Hébreu">Hébreu</option>
-                <option value="Italien">Italien</option>
-                <option value="Japonais">Japonais</option>
-                <option value="Mandarin">Mandarin</option>
-                <option value="Néerlandais">Néerlandais</option>
-                <option value="Polonais">Polonais</option>
-                <option value="Portugais">Portugais</option>
-                <option value="Russe">Russe</option>
-                <option value="Suédois">Suédois</option>
-                <option value="Turc">Turc</option>
-              </datalist>
-        </div>
-        <!-- submit button -->
-        <button type="submit" class="btn btn-primary mt-2">Soumettre</button>
-    </form>
+            <!-- conditions checkbox -->
+            <div class="form-group">
+                <div class="form-check">
+                    <input type="checkbox" name="" id="conditions" class="form-check-input" required>
+                    <label for="conditions" class="form-check-label ">J'accepte les termes et conditions</label>
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback">Veuillez cocher ce carré avant d'avancer</div>
+                </div>
+            </div>
+    
+             <!-- message text area -->
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea name="" id="message" class="form-control"></textarea>
+            </div>
+    
+            <!-- country -->
+            <div class="form-group">
+                <label for="country">Pays</label>
+                <select class="form-select" name="" id="country" required>
+                    <option value="" selected disabled>Sélectionner un pays</option>
+                    <option value="Maroc">Maroc</option>
+                    <option value="France">France</option>
+                    <option value="Espagne">Espagne</option>
+                </select>
+                <div class="valid-feedback"></div>
+                <div class="invalid-feedback">Veuiller sélectionner un pays</div>
+            </div>
+    
+            <!-- preferred language -->
+            <div class="form-group">
+                <label for="language">Langue préférée</label>
+                <input class="form-control" list="langues" id="language" required>
+                <datalist id="langues">
+                    <option value="Afrikaans">Afrikaans</option>
+                    <option value="Allemand">Allemand</option>
+                    <option value="Anglais">Anglais</option>
+                    <option value="Arabe">Arabe</option>
+                    <option value="Espagnol">Espagnol</option>
+                    <option value="Français">Français</option>
+                    <option value="Hébreu">Hébreu</option>
+                    <option value="Italien">Italien</option>
+                    <option value="Japonais">Japonais</option>
+                    <option value="Mandarin">Mandarin</option>
+                    <option value="Néerlandais">Néerlandais</option>
+                    <option value="Polonais">Polonais</option>
+                    <option value="Portugais">Portugais</option>
+                    <option value="Russe">Russe</option>
+                    <option value="Suédois">Suédois</option>
+                    <option value="Turc">Turc</option>
+                  </datalist>
+                <div class="valid-feedback"></div>
+                <div class="invalid-feedback">Veuiller sélectionner une langue</div>
+            </div>
+            <!-- submit button -->
+            <button type="submit" class="btn btn-primary mt-2">Soumettre</button>
+        </form>
+    </div>
+    
 
 
 
