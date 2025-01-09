@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+/* fonts */
+@font-face {
+    font-family: "Playfair Display";
+    src: url(./fonts/PlayfairDisplay-VariableFont_wght.ttf) format("truetype");
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "Playfair Display", 'Times New Roman', Times, serif;
+    display:flex;
+    flex-direction: column;
+    margin:0;
+}
+
+
+
+.header {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: 
+    "logo nav";
+    width: 100%;
+    gap: 50%;
+    align-items: center;
+    background-color: #e5d6c0;
+}
+
+.logo {
+    grid-area: logo;
+    padding: 2%;
+}
+
+.logo::before {
+    content: "💺";
+    font-size: 1.5em;
+}
+
+
+.nav-items {
+    grid-area: nav;
+    list-style-type: none;
+    display: flex;
+    gap:10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #95a9aa;
+}
+
+.nav-link:hover {
+    color: #6a4032;
+}
+/* styling the cards section */
+.cardList {
+    display: flex;
+    gap:1%;
+    width: 100%;
+    justify-content: center;
+    margin-top: 5%
+}
+
+.card {
+    outline: 1px solid lightgrey;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    transition: transform 0.3s ease-in-out;
+    background-color: whitesmoke;
+    padding-bottom: 2%;
+    width: 30%;
+}
+/* styling the card images */
+.card-image {
+    max-height: 50%;
+    max-width: 50%;
+    margin-bottom: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+    margin:auto;
+}
+
+.card-image > img {
+    max-width: 100%;
+    object-fit: contain;
+}
+/* styling the card text */
+.card-title {
+    font-weight: bold;
+    padding-inline: 10%;
+
+}
+
+.card-price {
+    font-style:italic;
+    padding-inline: 10%;
+}
+
+/* creating a little hover effect for the cards */
+.card:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    .cardList {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin-block: 2.5%
+    }
+
+    .header {
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+      "logo"
+      "nav";
+      grid-template-columns:none;
+      gap:0;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .nav-items {
+        justify-content: center;
+    }
+
+    
+}
+
