@@ -1,4 +1,4 @@
-from abc import abstractmethod
+from abc import ABC, abstractmethod
 
 
 
@@ -38,7 +38,7 @@ class Bibliothecaire(Utilisateur):
     def afficher_details(self):
         return f"nom: {self.nom}, email: {self.email} livre empruntes: {self.livres_empruntes}, type d'utilsateur: Bibliothecaire"
     
-class Personne(abc):
+class Personne(ABC):
     @abstractmethod
     def afficher_details():
         pass
