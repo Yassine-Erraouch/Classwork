@@ -1,0 +1,53 @@
+"""
+        •	Créer une classe => ajouter un nouveau type à la liste des types
+        •	Classe est modèle , un plan qui décrit la structure (attributs et méthodes des objets)
+        •	Objet est une variable complexe de type classe
+        •	Pour construire un objet on doit appeler le constructeur de la classe
+        •	Les constructeurs de la classe sont des méthodes magiques qui portent le nom __init__
+        •	Une classe peut avoir plusieurs constructeurs (constructeur par défaut , constructeur d’initialisation …)
+        •	Une classe peut avoir d’autres méthodes magiques qui facilitent la manipulation des objets de cette classe :
+        o	__str__ : -convertir un objet de type classe  en string
+        o	__repre__ : si __str__ n est pas définie 
+        o	__eq__   : pour définir la logique de comparaison de deux objets de type classe ( ==)
+        o	__lt__ : pour vérifier si un objet est inférieur à un autre
+        o	__gt__ : 
+        NB. On les appelle méthode magiques parce qu’on les appelle implicitement                                              
+"""
+class Produit:
+    #les methodes magiques
+    """def __init__(self):
+        self.codeP=0
+        self.intitule=""
+        self.prix=0"""
+    def __init__(self,c,nom,p):
+        self.codeP=c
+        self.intitule=nom
+        self.prix=p
+    def __str__(self):
+        return f'{self.codeP}-{self.intitule}-{self.prix}'
+    def __eq__(self,p):
+        return p.codeP==self.codeP
+    #les méthodes d instance
+    def afficher(self):
+        print(f"{self.intitule}**{self.prix}")
+a,b=Produit(1000,'Ordinateur',10000),Produit(1000,'Ordinateur',10000)
+print(a==b)
+a.afficher()
+
+#créer la classe Cart 
+### attribut : listProduit initialisé par défaut une liste vide 
+class Cart:
+    def __init__(self):
+        self.listP=[]
+    #define addProduct(self,product)=>ajoute au produit l'attribut qte avec la valeur par defaut 1
+    #define removeProductFrmCart(self,codeP) =>
+    #define incrementQte(self,codeP)  =>
+    # define decrementQte(self,codeP) => decremente la qte et si la qte devient 0 le produit doit être ecrasé de la carte
+    #define TotalAmount(self): =>   calculer le prix total de tous les produits; 
+    """overide __str__ pour convertir la liste des produits en string
+              codeP     Intitule    Prix
+              1000      ordi        60000   
+              1001      scanner     8000    """
+
+
+    

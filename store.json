@@ -1,0 +1,4 @@
+[{"code": "1234", "name": "Hammer", "price": 10, "quantity": 10},
+ {"code": "5678", "name": "Saw", "price": 20, "quantity": 12},
+  {"code": "9012", "name": "Drill", "price": 50, "quantity": 20},
+   {"code": "3456", "name": "Tape measure", "price": 5, "quantity": 25}]
