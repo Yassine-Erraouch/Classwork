@@ -59,6 +59,7 @@ a {
     padding: 2%;
     align-items: center;
     justify-content: space-between;
+    transition: transform 0.3s ease-in-out;
 }
 
 .item-img {
@@ -98,6 +99,12 @@ a {
 label {
     font-weight: bold;
 }
+/* adding a hover effect on the items */
+
+.item:hover {
+    transform: translateY(-10px)
+}
+
 
 /* cart section */
 
@@ -150,6 +157,6 @@ label {
 
     .cart {
         width: 100%;
-        min-height: 20%
+        min-height: 21%
     }
 }
