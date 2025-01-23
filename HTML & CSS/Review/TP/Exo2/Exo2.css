@@ -47,6 +47,7 @@ a {
     flex-direction: column;
     width: 70%;
     gap: 2%;
+    overflow: auto;;
 }
 /* items section */
 .item {
