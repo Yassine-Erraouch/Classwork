@@ -10,21 +10,21 @@
     <div class="container-fluid">
         <form action="#" novalidate class="form was-validated">
             <label for="name" class="form-label">Nom Complet: </label>
-            <input type="text" name="" id="name" class="form-control"  id="name">
+            <input type="text" name="" id="name" class="form-control"  id="name" required pattern="[A-Za-z\s]{3,50}">
 
             <label for="email" class="form-label">Email: </label>
-            <input type="text" name="" id="email" id="email" class="form-control">
+            <input type="text" name="" id="email" id="email" class="form-control" required pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}]$">
 
             <label for="password" class="form-label">Mote de passe: </label>
-            <input type="password" name="" id="password"  class="form-control">
+            <input type="password" name="" id="password"  class="form-control" required pattern="^[a-zA-Z0-9@_!?#$%^&*]{6,}$">
 
             <label for="confirm-password" class="form-label">Confirmer mot de passe: </label>
-            <input type="password" name="" id="confirm-password" class="form-control">
+            <input type="password" name="" id="confirm-password" class="form-control" required pattern="^[a-zA-Z0-9@_!?#$%^&*]{6,}$">
 
             <label for="phone" class="form-label">téléphone: </label>
-            <input type="tel" name="" id="phone" class="form-control">
+            <input type="tel" name="" id="phone" class="form-control" required pattern="^+\d{2,3}\s\d{3}\s\d{3}\s\d{3}$">
 
-            <input type="checkbox" name="" id="consent">
+            <input type="checkbox" name="" id="consent" required>
             <label for="consent" class="form-label">J'accepte les termes et conditions</label>
         </form>
     </div>
