@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            font-family: 'lato', serif;
+        }
+
+        /* Custom Text Colors */
+        .text-warm-primary {
+            color: #FF6F61 !important; /* Coral */
+        }
+
+        .text-warm-secondary {
+            color: #FFA07A !important; /* Light Salmon */
+        }
+
+        .text-warm-accent {
+            color: #FFD700 !important; /* Gold */
+        }
+
+        .text-warm-neutral {
+            color: #F4E3C1 !important; /* Light Beige */
+        }
+
+        .text-warm-dark {
+            color: #8B4513 !important; /* Saddle Brown */
+        }
+
+        /* Custom Background Colors */
+        .bg-warm-primary {
+            background-color: #FF6F61 !important; /* Coral */
+        }
+
+        .bg-warm-secondary {
+            background-color: #FFA07A !important; /* Light Salmon */
+        }
+
+        .bg-warm-accent {
+            background-color: #FFD700 !important; /* Gold */
+        }
+
+        .bg-warm-neutral {
+            background-color: #F4E3C1 !important; /* Light Beige */
+        }
+
+        .bg-warm-dark {
+            background-color: #8B4513 !important; /* Saddle Brown */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form border rounded my-5 bg-warm-neutral">
+            <div class="row  mx-0 px-0  bg-warm-primary text-light rounded-top">
+                <div class="col ">
+                    <p class="text-center fw-bold fs-3 mt-3 ">BMI Calculator</p>
+                </div>
+            </div>
+            <div class="row text-warm-dark">
+                <div class="col text-center fs-5 mt-2 fw-bold">You are: </div>
+            </div>
+            <!-- gender row -->
+            <div class="row my-2 text-warm-dark">
+                <div class="col text-end">
+                    <!-- male radio -->
+                    <div class="form-check form-check-inline ">
+                        <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                        <label class="form-check-label" for="male">Male</label>
+                    </div>
+                </div>
+                
+                <div class="col text-start">
+                    <!-- female radio -->
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                        <label class="form-check-label" for="female">Female</label>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- inputs row -->
+            <!-- age -->
+            <div class="row my-2 px-5 text-warm-dark">
+                <div class="col d-flex flex-column justify-content-center align-items-center">
+                    <label class="form-label fw-bold" for="age">Your Age</label>
+                    <input type="text" class="form-control" required id="age">
+                </div>
+                <!-- height -->
+                <div class="col d-flex flex-column justify-content-center align-items-center">
+                    <label class="form-label fw-bold" for="height">Your Height (cm)</label>
+                    <input type="text" class="form-control" required id="height">
+                </div>
+                <!-- weight -->
+                <div class="col d-flex flex-column justify-content-center align-items-center">
+                    <label class="form-label fw-bold" for="weight">Your Weight (kg)</label>
+                    <input type="text" class="form-control" required id="weight">
+                </div>
+            </div>
+
+            <!-- calculate button -->
+            <div class="row justify-content-center gap-3 my-4 ">
+            <button class="btn btn w-25 text-warm-dark bg-warm-secondary" id="calculate">Calculate</button>
+            <button class="btn btn w-25 text-warm-neutral bg-danger" id="reset">Reset</button>
+            </div>
+
+            <!-- result -->
+            <div class="row">
+                <div class="col m-2 d-flex justify-content-center">
+                    <input type="text" class="form-control w-50 text-center d-none" disabled id="result">
+                </div>
+            </div>
+    </div>
+
+
+    <!-- js -->
+    <script>
+        //calculate button
+        document.querySelector("#calculate").addEventListener("click", function() {
+            let age = document.querySelector("#age").value;
+            let height = document.querySelector("#height").value;
+            let weight = document.querySelector("#weight").value;
+            let gender = document.querySelector('input[name="gender"]:checked').value;
+            let bmi = document.querySelector("#result").value;
+            bmi = 0;
+            if (gender == "male") {
+                bmi = (weight / ((height)/100)**2) * 1.05;
+            } else {
+                bmi = (weight / ((height)/100)**2) * 0.95;} 
+            if (age != "" && height != "" && weight != "") {
+            document.querySelector("#result").classList.remove("d-none")
+            document.querySelector("#result").value = bmi.toFixed(2);
+            }
+        }    
+        )
+
+        //reset button
+        document.querySelector("#reset").addEventListener("click", function() {
+            document.querySelector("#age").value = "";
+            document.querySelector("#height").value = "";
+            document.querySelector("#weight").value = "";
+            document.querySelector("#result").value = "";
+            document.querySelector("#result").classList.add("d-none")
+        })
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
