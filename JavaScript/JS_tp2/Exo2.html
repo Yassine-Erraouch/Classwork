@@ -7,9 +7,152 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="container d-flex flex-column mt-5 border p-3 rounded border-4 border-primary">
+       <p class="text-center fs-2 fw-bold">Build Your PC</p>
+       <!-- form -->
+       <form action="#" class="form d-flex flex-column gap-4">
+            <!-- motherboard -->
+            <div class="form-group">
+                <label for="mboard" class="form-label fw-bold fs-5">MotherBoard</label>
+                <select name="mboard" id="mboard" class="form-select text-center" required>
+                    <option value="" selected disabled>Choose a motherboard</option>
+                    <option value="800">ASUS</option>
+                    <option value="600">VIA</option>
+                    <option value="500">SIS</option>
+                </select>
+            </div>
 
+            <!-- screen -->
+            <div class="form-group d-flex flex-column gap-2">
+                <label for="" class="form-label fw-bold fs-5">Screen</label>
+                <!-- screen size -->
+                <div class="form-group px-3">
+                    <label for="size" class="form-label">Size:</label>
+                    <!-- small size -->
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" value="15" name="size" id="small" required>
+                        <label for="small" class="form-check-label">15"</label>
+                    </div>
+                    
+                    <!-- large size -->
+                    <div class="form-check">
+                        <input type="radio" name="size" id="large" class="form-check-input" value="17" required>
+                        <label for="large" class="form-check-label">17"</label>
+                    </div>
+                </div>
+                <!-- screen type -->
+                <div class="form-group px-3">
+                    <label for="" class="form-label ">Type:</label>
+                    <!-- LCD -->
+                    <div class="form-check">
+                        <input type="radio" name="type" id="lcd" value="lcd" class="form-check-input" required>
+                        <label for="lcd" class="form-label">LCD</label>
+                    </div>
+                    <!-- LED -->
+                    <div class="form-check">
+                        <input type="radio" name="type" id="led" value="led" class="form-check-input" required>
+                        <label for="led" class="form-label">LED</label>
+                    </div>
+                </div>
+            </div>
 
+            <!-- accessories -->
+            <div class="form-group">
+                <label for="" class="form-label fw-bold fs-5">Accessories</label>
+                <!-- printer -->
+                <div class="container px-3">
+                    <div class="form-check">
+                        <input type="checkbox" id="printer" class="form-check-input" value="600">
+                        <label for="printer" class="form-label">Printer</label>
+                    </div>
     
+                    <!--Scanner  -->
+                    <div class="form-check">
+                        <input type="checkbox" id="scanner" class="form-check-input" value="600">
+                        <label for="scanner" class="form-label">Scanner</label>
+                    </div>
+                </div>
+               
+            </div>
+
+            <!-- category -->
+            <div class="form-group d-flex flex-column gap-3">
+                <label for="cateogry" class="form-label fw-bold fs-5">Category</label>
+                <select name="cateogry" id="category" class="form-select text-center" required>
+                    <option value="" selected disabled>Choose a category</option>
+                    <option value="20">Student</option>
+                    <option value="10">Other</option>
+                </select>
+
+                <div class="container d-flex gap-2 justify-content-center align-items-center">
+                    <p class="d-flex justify-content-center">Discount % </p>
+                    <input type="text" name="" id="discount" readonly class="form-control w-25 text-center">
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-primary" id="calculate">Calculate Price</button>
+
+            <div class="container d-none d-flex gap-3 justify-content-center align-items-center" id="result">
+                <p>This PC will cost:</p>
+                <input type="text" class="form-control w-25 text-center" id="cost">
+                <p>$</p>
+            </div>
+        </div>
+       </form>
+    </div>
+
+    <script type="text/javascript">
+        document.querySelector("#category").addEventListener('change', function() {
+            if(document.querySelector("#category").value == "student")
+                document.querySelector("#discount").value = "20%";
+            else if (document.querySelector("#category").value == "other")
+                document.querySelector("#discount").value = "10%";
+        })
+        
+
+        document.querySelector("#calculate").addEventListener('click', function() {
+            let total = 0;
+            let mb = document.querySelector("#mboard").value
+            let discount = parseInt(document.querySelector("#category").value);
+            
+            let screenSize = document.querySelector("input[name='size']:checked").value
+            let screenType = document.querySelector("input[name='type']:checked").value
+            let screen = 0;
+
+            if(screenSize =="15" && screenType == "lcd")
+                screen = 1500;
+            else if (screenSize == "15" && screenType == "led")
+                screen = 2000;
+            else if (screenSize == "17" && screenType == "lcd")
+                screen = 2500;
+            else if (screenSize == "17" && screenType == "led")
+                screen = 3000;
+            
+            if (document.querySelector("#printer").checked)
+                total += 600;
+            if (document.querySelector("#scanner").checked)
+                total += 600;
+            total += screen;
+            total += parseInt(mb);
+            totalWithDiscount = total - (total * (discount/ 100));
+            totalAftertax = totalWithDiscount * 1.05;
+
+            if (!mb || !screenSize || !screenType || !discount) {
+                window.alert("Please fill in all the required fields.");
+            }
+            else {
+                document.querySelector("#cost").value = totalAftertax.toFixed(2);
+                document.querySelector("#result").classList.remove("d-none");
+            }
+            
+         
+
+        })
+
+
+
+
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
