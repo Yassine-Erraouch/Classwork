@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+        // function that counts the number of appearance of a value within an array
+        array = [34, 12, 45, 97, 23, 67, 12, 97, 13, 74, 12];
+        let compterOccurences = (tab, val) => {
+            count = 0;
+            for(x of tab){
+                if(x ===val)
+                count += 1;
+            }
+            return count;
+        }
+
+        console.log(compterOccurences(array, 12))
+
+
+    </script>
+</body>
+</html>

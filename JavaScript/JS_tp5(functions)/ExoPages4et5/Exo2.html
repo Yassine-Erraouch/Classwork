@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //without reduece
+        /*
+        let sommeTableau = (tab) => {
+            let sum = 0;
+            for (let i = 0; i < tab.length; i++){
+                sum += tab[i]
+            }
+            return sum;
+        }
+
+        let array = [20, 1, 2003, 1978, 1, 1]
+        alert(sommeTableau(array));
+        console.log(sommeTableau(array));
+        */
+
+        // with reduce
+        let array = [20, 1, 2003, 1978, 1, 1];
+        let sum = array.reduce((a,i)=> a+=i, 0);
+        alert(sum);
+        console.log(sum);
+
+    </script>
+</body>
+</html>

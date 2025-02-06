@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        //without Math.max()
+        /*
+        numbers = [10, 20, 30, 450];
+        let trouverMax = (array) => {
+            max = array[0];
+            for (x of array) {
+                if(x > max) {
+                    max = x;
+                }
+            }
+            return max;
+        }
+        
+        alert(trouverMax(numbers))
+        */
+
+        //with Math.max()
+        numbers = [10, 20, 30, 450];
+       
+        alert(Math.max(...numbers));
+        console.log(Math.max(...numbers));
+    
+
+    </script>
+</body>
+</html>
