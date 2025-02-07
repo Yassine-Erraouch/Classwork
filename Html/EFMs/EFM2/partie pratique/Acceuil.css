@@ -1,0 +1,105 @@
+* {box-sizing: border-box;}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #fbfbfb;
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    height: 10vh;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand-img {
+    max-height: 100%;
+}
+
+
+
+.links {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    gap: 10%;
+    align-items: center;
+}
+
+#inscription {
+    position: relative;
+}
+
+
+
+
+#dropdown {
+    list-style-type: none;
+    position: absolute;
+    padding: 0px;
+    width: 150px;
+    visibility: hidden;
+    
+}
+
+#dropdown:hover {
+    visibility: visible;
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+}
+
+.main {
+    background-image: url(./meeting-room.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10%;
+    gap: 15px;
+    width: 100%;
+    margin: 0;
+}
+
+#content {
+    color: white;
+}
+
+.button {
+    color: white;
+    background-color: #a78d74;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 5px;
+
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    background-color: #fbfbfb;
+    height: 10vh;
+}
+#phone, #mail, #adress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+

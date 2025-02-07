@@ -1,0 +1,27 @@
+1 
+    a-ul(unordered list)
+    b-ol(ordered list)
+    c-
+    d-
+
+
+2
+    <iframe src="https://www.youtube.com/embed/Ma1vScv07ug" width="500px" height="500px" frameborder="0"></iframe>
+
+3
+    on peut appliquer le code css en trois façons differentes:
+    1.css inline;
+    2.css interne (dans la balise style dans la balise head)
+    3.css externe (lié à la page html avec la balise link)
+
+4
+    word-spacing: control l'espace entre les mot dans un paragraphe par exemple;
+    text-decoration: peut attribuer une decoration au text (un souligne par exemple)
+    text-transform: peux effectuer quelque transformations au text.(capitalisation, rendre titre etc)
+
+5
+    animation-name: nom d'animation;
+    animation-duration: durée de l'animation;
+    timing-function;
+    delay: le retard avant que l'animation commence;
+    iteration-count: le nombre de fois l'animation se repète

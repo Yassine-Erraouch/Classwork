@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form>
+        <label for="monnom">Mon nom</label>
+        <input type="text" id="monnom" name="monnom" required pattern="[a-zA-z]{1,32}">
+
+        <label for="motdepasse">Mon mot de passe</label>
+        <input type="password" id="motdepasse" name="motedepasse" required>
+
+        <label for="monemail">Mon email</label>
+        <input type="text" id="monemail" name="monemail" required>
+
+        <button type="submit">Envoyer</button>
+    </form>
+</body>
+</html>
