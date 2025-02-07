@@ -36,13 +36,40 @@
             <!-- show prices above a minimum price-->
             <p>Find Products</p>
             <div class="form-group">
-                <input type="text" name="" id="minimumPrice" class="form-control" placeholder="Minimum price">
+                <input type="text" name="" id="minPrice" class="form-control" placeholder="Minimum price">
                 <button class="btn btn-info" type="button" id="search">Search</button>
             </div>
         </form>
     </div>
 
 
+    <script>
+        let productToAdd = document.querySelector('#productToAdd').value
+        let productPrice = parseFloat(document.querySelector('#price').value)
+        let productToRemove = document.querySelector('#productToRemove').value
+        let minPrice = parseFloat(document.querySelector('#minPrice'))
+        let products = []
+        // defining the function for the buttons
+        let add = () => {
+            let product = {productName: productName, price: productPrice};
+            products.push(product);
+        }
+
+        let remove = () => {
+            let productName = document.querySelector('#productToRemove').value
+            for (let i = 0; i < products.length; i++) {
+                if (products[i].productName === productName) {
+                    products.splice(i, 1);
+                }
+            }
+        }
+
+        let search = () => {
+            let productsAboveMinPrice = products.filter(product => product.price > minPrice);
+            
+        }
+
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
