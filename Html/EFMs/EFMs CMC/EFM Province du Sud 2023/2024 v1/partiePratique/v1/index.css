@@ -1,0 +1,29 @@
+* {box-sizing: border-box;}
+
+.navbar {
+    box-shadow: 0 1px 10px black;
+}
+
+.nav-link {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+.card:hover {
+    outline: 2px solid gray;
+    border-radius: 20px;
+    background-color: rgb(123, 220, 130);
+}
+
+.btn:hover {
+    background-color: white;
+    color: rgb(159, 159, 252);
+    outline: 1px solid black;
+}
+

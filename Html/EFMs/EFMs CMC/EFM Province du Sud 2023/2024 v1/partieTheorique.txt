@@ -1,0 +1,40 @@
+1.
+    CSS Flexbox est une propriété qui permet de controler le positionement des element dans un conteneur la distance entre eux. il est utilisé pour créer des pages web responsives.
+
+2.
+    >economisation de temps et d'effort: puisque bootstrap offre des classes css pretes a utiliser on peut sauver beacuoup de temp.
+    >le design responsive.
+    >la modalité. les classes bootstrap nous nous permettons de créers des sites comme construir de édifices lego.
+
+3.
+    c'est un site web qui s'adapte au taille d'ecran de n'importe quelle appareil.
+4.b
+
+5.a
+
+6.c
+
+7.b
+
+8.b
+
+9.d
+
+10.d
+
+11.c
+
+12.c
+
+13.c
+
+14.c
+
+15.b
+
+16.b
+
+
+
+
+
