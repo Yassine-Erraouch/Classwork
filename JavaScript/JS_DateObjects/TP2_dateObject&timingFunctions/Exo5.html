@@ -33,9 +33,23 @@
 
     <script>
         let calculateRetirementAge = () => {
-            let bdate = new Date(document.getElementById("bdate").value);
-            let retAge = document.getElementById("retAge").value;
-            let age = Math.floor((new Date() - bdate) / (1000 * 60 * 60 * 24 * 365));
+            let bdate = new Date(document.getElementById("bdate").value).getTime();
+            let retAge = new Date(document.getElementById("retAge").value).getTime;
+            let age = new Date().getTime() - bdate;
+            let timeTillRet = retAge - age;
+            //tests 
+            console.log(bdate);
+            console.log(retAge);
+            console.log(age);
+            console.log(timeTillRet);
+            if (timeTillRet <0) {
+                alert("This person is past retirement age.");
+                return;
+            }
+            let years = Math.floor(timeTillRet/(1000*60*60*24*365));
+            let months = Math.floor(timeTillRet / (1000*60*60*24)% 365 / 30);
+            let days = Math.floor(timeTillRet / (1000*60*60*24)% 365 % 30);
+            document.getElementById("output").innerHTML = "Time till retirement: " + years + " years " + months + " months " + days + " days";
         }
     </script>
 
