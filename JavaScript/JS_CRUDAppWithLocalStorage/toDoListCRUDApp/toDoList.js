@@ -61,8 +61,12 @@ let deleteTask = (taskName) => {
 
 let editTask = (taskName) => {
     let task = tasks.find(task => task.name === taskName);
-   
+    let taskNameInput = document.querySelector('#taskName');
+    taskNameInput.value = task.name;
+    taskNameInput.focus();
+    
 }
+
 
 displayTasks();
 
