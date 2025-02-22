@@ -170,15 +170,18 @@ let retirer = () => {
         alert('Please select a book first');
         return;
     }
-    let book = books.find((book)=> book.ISBN === bookList.value);
-    if(!cart.find((item) => item.ISBN === book.ISBN)) {
-        alert('This book is not in your cart');
-        return;
+    if (confirm('Are you sure you want to remove this item from your cart?')) {
+        let book = books.find((book)=> book.ISBN === bookList.value);
+        if(!cart.find((item) => item.ISBN === book.ISBN)) {
+            alert('This book is not in your cart');
+            return;
+        }
+        cart = cart.filter((item) => item.ISBN !== book.ISBN);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        
+        loadCart();
     }
-    cart = cart.filter((item) => item.ISBN !== book.ISBN);
-    localStorage.setItem('cart', JSON.stringify(cart));
     
-    loadCart();
 }
 
 // laoding books to the book select on load
