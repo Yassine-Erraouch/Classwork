@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+
+    
+
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'>
+    <link rel="stylesheet" href="./style.css">
+    <title>Library</title>
+</head>
+<body>
+    <nav class="navbar navbar-dark  bg-navy px-2">
+        <a href="./index.html" class="navbar-brand fs-2 ">Bookly</a>
+    </nav>
+
+
+    <div class="container-fluid bg-parchment">
+        <div class="row">
+
+            <!-- section for displaying all books -->
+            <div class="col-8 d-flex flex-wrap gap-2 m-2">
+                <div class="fs-1 fw-bold text-maroon">Our Books</div>
+                <div class="row"  id="bookList">
+                    
+                </div>
+            </div>
+
+            <!-- section for display the user's selected books -->
+            <div class="col  d-flex flex-column gap-2 m-2" >
+                <div class="fs-1 fw-bold text-maroon">Your Selection</div>
+                <div class="row  d-flex flex-column" id="selection"></div>
+            </div>
+
+        </div>
+    </div>
+
+
+ 
+    
+
+
+    <!-- modal for showing book details -->
+    
+    
+    <!-- Modal -->
+    <div class="modal fade" id="bookDetails" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-between">
+            <h5 class="modal-title fw-bold" id="modalTitle"></h5>
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body ">
+                <div class="card d-flex flex-row  gap-3 justify-content-center px-0">
+                    <div class="d-flex align-items-center p-3" id="image"></div>
+                    <div class="card-body p-1 d-flex flex-column gap-2 justify-content-around">
+                        <div>
+                            <div class="card-text fst-italic" id="author"></div>
+                            <div class="card-text fst-italic"  id="price"> </div>
+                            <div class="card-text d-flex flex-column gap-2 my-2 py-3 pe-3" id="comments"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+
+
+
+
+
+                <!-- <div class="" id="image"></div>
+                <div class="">
+                    <div class="fst-italic" id="author"></div>
+                    <div class="fst-italic" id="price"></div>
+                    <div class="" id="comments"></div>
+                </div>
+            </div> -->
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- script -->
+    <script src="./script.js"></script>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+
+/* the background color classes */
+.bg-navy {
+    background-color: #2C3E50 !important; /* Deep navy for headers/footers */
+}
+
+.bg-parchment {
+    background-color: #F4F1DE !important; /* Warm beige for backgrounds */
+}
+
+.bg-maroon {
+    background-color: #8B0000 !important; /* Rich maroon for accents */
+}
+
+.bg-gold {
+    background-color: #D4AF37 !important; /* Soft gold for highlights */
+}
+
+.bg-forest {
+    background-color: #228B22 !important; /* Forest green for success states */
+}
+
+.bg-slate {
+    background-color: #2F4F4F !important; /* Dark slate for dark backgrounds */
+}
+
+/* the text color classes */
+.text-navy {
+    color: #2C3E50 !important; /* Deep navy for headings */
+}
+
+.text-parchment {
+    color: #F4F1DE !important; /* Warm beige for light text */
+}
+
+.text-maroon {
+    color: #8B0000 !important; /* Rich maroon for accents */
+}
+
+.text-gold {
+    color: #D4AF37 !important; /* Soft gold for highlights */
+}
+
+.text-forest {
+    color: #228B22 !important; /* Forest green for success text */
+}
+
+.text-slate {
+    color: #2F4F4F !important; /* Dark slate for body text */
+}
+
+/* the button color classes */
+.btn-navy {
+    background-color: #2C3E50 !important;
+    color: #FFFFFF !important;
+    border-color: #2C3E50 !important;
+}
+
+.btn-maroon {
+    background-color: #8B0000 !important;
+    color: #FFFFFF !important;
+    border-color: #8B0000 !important;
+}
+
+.btn-gold {
+    background-color: #D4AF37 !important;
+    color: #2C3E50 !important; /* Dark text for contrast */
+    border-color: #D4AF37 !important;
+}
+
+.btn-forest {
+    background-color: #228B22 !important;
+    color: #FFFFFF !important;
+    border-color: #228B22 !important;
+}
+
+.btn-parchment {
+    background-color: #F4F1DE !important;
+    color: #2C3E50 !important; /* Dark text for contrast */
+    border-color: #F4F1DE !important;
+}
+
+
+
+/* object fit  for images*/
+img {
+    object-fit: contain;
+}
+
+
+
+body :not(nav) {
+    font-family:  "Lora", serif;
+}
+
+nav {
+    font-family: 'Playfair Display', serif;
+}
