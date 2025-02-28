@@ -1,0 +1,71 @@
+.bg-gold {
+    background-color: #FFD700; /* Gold */
+}
+.bg-black {
+    background-color: #000000; /* Black */
+}
+.bg-silver {
+    background-color: #C0C0C0; /* Silver */
+}
+.bg-deepblue {
+    background-color: #003366; /* Deep Blue */
+}
+
+/* Custom Text Colors */
+.text-gold {
+    color: #FFD700; /* Gold */
+}
+.text-black {
+    color: #000000; /* Black */
+}
+.text-silver {
+    color: #C0C0C0; /* Silver */
+}
+.text-deepblue {
+    color: #003366; /* Deep Blue */
+}
+
+/* Custom Button Colors */
+.btn-gold {
+    background-color: #FFD700; /* Gold */
+    border-color: #FFD700;
+    color: #000000; /* Black */
+}
+.btn-gold:hover {
+    background-color: #e6b800; /* Darker Gold */
+    border-color: #e6b800;
+    color: #000000;
+}
+
+.btn-black {
+    background-color: #000000; /* Black */
+    border-color: #000000;
+    color: #FFFFFF; /* White */
+}
+.btn-black:hover {
+    background-color: #333333; /* Darker Black */
+    border-color: #333333;
+    color: #FFFFFF;
+}
+
+.btn-silver {
+    background-color: #C0C0C0; /* Silver */
+    border-color: #C0C0C0;
+    color: #000000; /* Black */
+}
+.btn-silver:hover {
+    background-color: #a8a8a8; /* Darker Silver */
+    border-color: #a8a8a8;
+    color: #000000;
+}
+
+.btn-deepblue {
+    background-color: #003366; /* Deep Blue */
+    border-color: #003366;
+    color: #FFFFFF; /* White */
+}
+.btn-deepblue:hover {
+    background-color: #002244; /* Darker Deep Blue */
+    border-color: #002244;
+    color: #FFFFFF;
+}

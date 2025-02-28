@@ -93,8 +93,7 @@ let edit = (index) => {
     echelonInput.value = employees[index].echelon;
     photoInput.value = employees[index].photo;
 
-
-    addBtn.addEventListener('click', ()=> {
+    const updateEmployee = () => {
         employees[index].id = idInput.value;
         employees[index].lname = lnameInput.value;
         employees[index].fname = fnameInput.value;
@@ -102,7 +101,12 @@ let edit = (index) => {
         employees[index].echelon = echelonInput.value;
         employees[index].photo = photoInput.value || employees[index].photo;
         displayInfo();
-    })
+    };
+
+
+    addBtn.addEventListener('click', updateEmployee); // add new event listener
+    addBtn.removeEventListener('click', updateEmployee); // remove previous event listener
+    
 
 
 }
