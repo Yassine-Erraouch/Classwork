@@ -1,0 +1,90 @@
+[
+    {
+        "id": 1,
+        "fname": "Youssef",
+        "lname": "Bouftass",
+        "echelle": 12,
+        "echelon": 5,
+        "photo": "./images/Youssef Bouftass.jpg"
+    },
+    {
+        "id": 2,
+        "fname": "Amine",
+        "lname": "El Kaddouri",
+        "echelle": 10,
+        "echelon": 8,
+        "photo": "./images/El Kaddouri amine.jpg"
+    },
+    {
+        "id": 3,
+        "fname": "Mohammed",
+        "lname": "Berrada",
+        "echelle": 12,
+        "echelon": 15,
+        "photo": "./images/Berrada Mohamed.jpg"
+    },
+    {
+        "id": 4,
+        "fname": "Fatima",
+        "lname": "Zahra",
+        "echelle": 15,
+        "echelon": 10,
+        "photo": "./images/Zahra fatima.jpg"
+    },
+    {
+        "id": 5,
+        "fname": "Ayoub",
+        "lname": "El Hassani",
+        "echelle": 7,
+        "echelon": 22,
+        "photo": "./images/El hasani ayoub.jpg"
+    },
+    {
+        "id": 6,
+        "fname": "Youssef",
+        "lname": "El Moutawakel",
+        "echelle": 22,
+        "echelon": 12,
+        "photo": "./images/El moutawakel Youssef.jpg"
+    },
+    {
+        "id": 7,
+        "fname": "Lamiae",
+        "lname": "El Ouazzani",
+        "echelle": 25,
+        "echelon": 7,
+        "photo": "./images/El ouazzani lamiae.jpg"
+    },
+    {
+        "id": 8,
+        "fname": "Said",
+        "lname": "El Jaber",
+        "echelle": 10,
+        "echelon": 25,
+        "photo": "./images/Said el jabbar.jpg"
+    },
+    {
+        "id": 9,
+        "fname": "Rachid",
+        "lname": "El Moudden",
+        "echelle": 20,
+        "echelon": 10,
+        "photo": "./images/el mouden Rachid.jpg"
+    },
+    {
+        "id": 10,
+        "fname": "Safia",
+        "lname": "El Khalfi",
+        "echelle": 8,
+        "echelon": 20,
+        "photo": "./images/Safia el khalfi.jpg"
+    },
+    {
+        "id": 11,
+        "fname": "Nadia",
+        "lname": "El Moutassim",
+        "echelle": 28,
+        "echelon": 12,
+        "photo": "./images/Nadia el moutassim.jpg"
+    }
+]
