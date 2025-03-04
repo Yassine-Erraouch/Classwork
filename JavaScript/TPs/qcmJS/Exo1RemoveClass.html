@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active{
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    
+    <ul>
+        <li class="active">One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ul>
+
+
+
+    <script>
+        let allLis = document.querySelector('ul li');
+        //remove active from all elements
+       
+        allLis.forEach(function(ele){
+            allLis.forEach(function(element) {
+                if(element.classList.contains("active")) {
+                    element.classList.remove("active");
+                }
+            })
+
+            ele.onclick = function() {
+                this.classList.add("active");
+            }
+        })
+
+
+    </script>
+</body>
+</html>
