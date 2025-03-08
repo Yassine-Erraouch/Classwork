@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Does médicament</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1>Dose médicament</h1>
+    <form id="doseForm">
+      <div class="mb-3">
+        <label for="drugName" class="form-label">Nom du médicament :</label>
+        <input type="text" class="form-control" id="drugName" required>
+      </div>
+      <div class="mb-3">
+        <label for="patientWeight" class="form-label">Poids du patient (kg) :</label>
+        <input type="number" class="form-control" id="patientWeight" required>
+      </div>
+      <div class="mb-3">
+        <label for="recommendedDose" class="form-label">Dose recommandée (mg/kg) :</label>
+        <input type="number" class="form-control" id="recommendedDose" required>
+      </div>
+      <div class="mb-3">
+        <label for="drugConcentration" class="form-label">Concentration du médicament (mg/mL) :</label>
+        <input type="number" class="form-control" id="drugConcentration" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Calculer</button>
+    </form>
+
+    <div id="result" class="mt-4" style="display: none;">
+      <h2>Résultat :</h2>
+      <p><strong>Dose totale :</strong> <span id="totalDose"></span> mg</p>
+      <p><strong>Volume à injecter :</strong> <span id="volumeToInject"></span> mL</p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('doseForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Get input values
+      const patientWeight = parseFloat(document.getElementById('patientWeight').value);
+      const recommendedDose = parseFloat(document.getElementById('recommendedDose').value);
+      const drugConcentration = parseFloat(document.getElementById('drugConcentration').value);
+
+      // Validate inputs
+      if (isNaN(patientWeight)) {
+        alert('Veuillez entrer un poids valide.');
+        return;
+      }
+
+      // Calculate total dose and volume
+      const totalDose = patientWeight * recommendedDose;
+      const volumeToInject = totalDose / drugConcentration;
+
+      // Display results
+      document.getElementById('totalDose').textContent = totalDose.toFixed(2);
+      document.getElementById('volumeToInject').textContent = volumeToInject.toFixed(2);
+      document.getElementById('result').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
