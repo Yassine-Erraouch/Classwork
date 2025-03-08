@@ -1,0 +1,122 @@
+[
+    {
+        "codeF": 1,
+        "name": "Apple",
+        "price": 12.50,
+        "photo": "https://images.unsplash.com/photo-1568702840273-9309e02d2d4e"
+    },
+    {
+        "codeF": 2,
+        "name": "Banana",
+        "price": 8.00,
+        "photo": "https://images.unsplash.com/photo-1571771894821-ce9b6c118b08"
+    },
+    {
+        "codeF": 3,
+        "name": "Orange",
+        "price": 10.00,
+        "photo": "https://images.unsplash.com/photo-1557800636-25a7a33d7f65"
+    },
+    {
+        "codeF": 4,
+        "name": "Mango",
+        "price": 25.00,
+        "photo": "https://images.unsplash.com/photo-160149405 Ribb0G8"
+    },
+    {
+        "codeF": 5,
+        "name": "Pineapple",
+        "price": 20.00,
+        "photo": "https://images.unsplash.com/photo-1550259114-4e5f75a7a4e9"
+    },
+    {
+        "codeF": 6,
+        "name": "Strawberry",
+        "price": 35.00,
+        "photo": "https://images.unsplash.com/photo-1544274410-0e058a6a849b"
+    },
+    {
+        "codeF": 7,
+        "name": "Grapes",
+        "price": 18.00,
+        "photo": "https://images.unsplash.com/photo-1601275863280-7b9e8b915e76"
+    },
+    {
+        "codeF": 8,
+        "name": "Watermelon",
+        "price": 6.00,
+        "photo": "https://images.unsplash.com/photo-1587049352851-8d4e4d179697"
+    },
+    {
+        "codeF": 9,
+        "name": "Kiwi",
+        "price": 30.00,
+        "photo": "https://images.unsplash.com/photo-1585052201332-1b66c1e476fd"
+    },
+    {
+        "codeF": 10,
+        "name": "Peach",
+        "price": 15.00,
+        "photo": "https://images.unsplash.com/photo-1629033188025-8d4f7e43e420"
+    },
+    {
+        "codeF": 11,
+        "name": "Pomegranate",
+        "price": 22.00,
+        "photo": "https://images.unsplash.com/photo-1605483591546-2bf5e362eecf"
+    },
+    {
+        "codeF": 12,
+        "name": "Lemon",
+        "price": 9.00,
+        "photo": "https://images.unsplash.com/photo-1590502592465-5130b589cbec"
+    },
+    {
+        "codeF": 13,
+        "name": "Cherry",
+        "price": 40.00,
+        "photo": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6"
+    },
+    {
+        "codeF": 14,
+        "name": "Pear",
+        "price": 14.00,
+        "photo": "https://images.unsplash.com/photo-1574201635302-388dd92a6dd1"
+    },
+    {
+        "codeF": 15,
+        "name": "Avocado",
+        "price": 28.00,
+        "photo": "https://images.unsplash.com/photo-1523049673857-260a967603e1"
+    },
+    {
+        "codeF": 16,
+        "name": "Dragon Fruit",
+        "price": 45.00,
+        "photo": "https://images.unsplash.com/photo-1561204155-114e88a84a35"
+    },
+    {
+        "codeF": 17,
+        "name": "Coconut",
+        "price": 25.00,
+        "photo": "https://images.unsplash.com/photo-1581833074140-7cd8f3b3f7d8"
+    },
+    {
+        "codeF": 18,
+        "name": "Fig",
+        "price": 30.00,
+        "photo": "https://images.unsplash.com/photo-1601039641847-4b7c9a98d8be"
+    },
+    {
+        "codeF": 19,
+        "name": "Papaya",
+        "price": 20.00,
+        "photo": "https://images.unsplash.com/photo-1576485225634-7d8c9b84588b"
+    },
+    {
+        "codeF": 20,
+        "name": "Plum",
+        "price": 16.00,
+        "photo": "https://images.unsplash.com/photo-1627912363002-4b92e8d63c8c"
+    }
+]
