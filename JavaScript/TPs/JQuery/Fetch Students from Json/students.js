@@ -30,6 +30,8 @@ document.querySelector("#addBtn").addEventListener('click', () => {
 
 document.querySelector("#cancelBtn").addEventListener('click', () => {
     form.classList.add('d-none');
+    document.querySelector('#saveStudent').classList.remove('d-none');
+    document.querySelector('#saveChangesBtn').classList.add('d-none');
 })
 
 let saveStudent = () => {
@@ -80,6 +82,8 @@ let editStudent = (index) => {
     document.querySelector('#studentPhoto').value = students[index].photo;
     
     form.classList.remove('d-none');
+    document.querySelector('#saveStudent').classList.add('d-none');
+    document.querySelector('#saveChangesBtn').classList.remove('d-none');
 
 
 }
@@ -100,6 +104,9 @@ let saveChanges = (index) => {
         document.querySelector('#studentPhoto').value = '';
         form.classList.add('d-none');
         loadDisplay();
+
+        document.querySelector('#saveStudent').classList.remove('d-none');
+        document.querySelector('#saveChangesBtn').classList.add('d-none');
     
     }
     
