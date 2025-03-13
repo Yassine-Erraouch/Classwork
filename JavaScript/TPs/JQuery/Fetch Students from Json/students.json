@@ -1,0 +1,52 @@
+[
+    {
+        "cef": 1234567890,
+        "fullName": "Jane Doe",
+        "major": "IT",
+        "photo": ""
+    },
+    {
+        "cef": 1003201012,
+        "fullName": "John Doe",
+        "major": "Mecanics",
+        "photo": ""
+    },
+    {
+        "cef": 2345678901,
+        "fullName": "Luigi Mangione",
+        "major": "Electricity",
+        "photo": ""
+    },
+    {
+        "cef": 3456789012,
+        "fullName": "Sean Combs",
+        "major": "Mecanics",
+        "photo": ""
+    },
+    {
+        "cef": 4567890123,
+        "fullName": "Luigi Mangione",
+        "major": "Engineering",
+        "photo": ""
+    },
+    {
+        "cef": 5678901234,
+        "fullName": "Luigi Mangione",
+        "major": "Engineering",
+        "photo": ""
+    },
+    {
+        "cef": 6789012345,
+        "fullName": "Niko Bellic",
+        "major": "Accounting",
+        "photo": ""
+    },
+    {
+        "cef": 7890123456,
+        "fullName": "Lebron James",
+        "major": "Managment",
+        "photo": ""
+    }
+    
+]
+

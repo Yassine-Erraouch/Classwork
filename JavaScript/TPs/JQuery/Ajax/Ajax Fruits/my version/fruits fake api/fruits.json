@@ -1,0 +1,125 @@
+
+{
+    "fruits" : [
+        {
+            "codeF": 1,
+            "name": "Apple",
+            "price": 12.50,
+            "photo": "https://imgs.search.brave.com/E4B3F1kqjhub03Tnmzg7vrlOIJbuj9sfy1n1lD8HEFg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTM2/NTA5OTg2OS9waG90/by9zaXgtYXBwbGVz/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1LeDlqTnZFRVQ1/RVJyN29ITkZNeHJv/VGM1NEsxTmdrN1Ix/Qlc5SUNYMlBVPQ"
+        },
+        {
+            "codeF": 2,
+            "name": "Banana",
+            "price": 8.00,
+            "photo": "https://imgs.search.brave.com/kygTG8I0FC80Fm87syf1ecYWkckEzbOUC8F2PJAf1nA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvOTU5/MTA0OTI4L3Bob3Rv/L2JhbmFuYS5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9akxs/SHRYTi10cnNaREJf/UVB2ZTlQRWZQRmF1/ZURYUzAxTDBBSG4x/N0hzRT0"
+        },
+        {
+            "codeF": 3,
+            "name": "Orange",
+            "price": 10.00,
+            "photo": "https://imgs.search.brave.com/prqkR80fnkcB1SO7Ft3yudW0wyf3tnxk0U6oiksdJeM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI3/NzQzNjIyL3Bob3Rv/L29yYW5nZXMuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPUJD/RUZJdUhBOTVVT1Z3/eFRwNzlKc0xhSFVl/a1NEVlRvRi1ELU1J/b0VNbU09"
+        },
+        {
+            "codeF": 4,
+            "name": "Mango",
+            "price": 25.00,
+            "photo": "https://imgs.search.brave.com/dxNz0vcL_CCvF3rsbRr4rI-6YyW_8MIWbOXnXaTaIbw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bWVsaXNzYXMuY29t/L2Nkbi9zaG9wL2Zp/bGVzL2ltYWdlLW9m/LXZhbGVuY2lhLXBy/aWRlLW1hbmdvcy0z/NDUwMzcwMjAyMDE0/MF81MTJ4NTEyLmpw/Zz92PTE2OTA0ODEy/NjY"
+        },
+        {
+            "codeF": 5,
+            "name": "Pineapple",
+            "price": 20.00,
+            "photo": "https://imgs.search.brave.com/XVcg2VsgmgbIjQepmqM845FjkBVGXQCOVYTn9sdtZwc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAwLzQwLzM2LzQ5/LzM2MF9GXzQwMzY0/OTU2X3BvRGZ0d2VD/ekhnUHFQNmF0d0Fu/MkJaNDB2VG5ibTFI/LmpwZw"
+        },
+        {
+            "codeF": 6,
+            "name": "Strawberry",
+            "price": 35.00,
+            "photo": "https://imgs.search.brave.com/AtqunEfFC8k6P4N1PldMDU6wTQanepqfuXeSoDKysp0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNjky/NTQyMzk0L3Bob3Rv/L3N0cmF3YmVycnku/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PVlMUUgyb2hjdkVJ/M0hCWDNlenJ6Vkoy/RFlSMndla2RKNnNz/YjZ5RjZiOTA9"
+        },
+        {
+            "codeF": 7,
+            "name": "Grapes",
+            "price": 18.00,
+            "photo": "https://imgs.search.brave.com/lh0339kB3wlBPap8cEIzXKA5CouYc1c5KsTgWdOqSOk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAwLzkwLzQwLzQy/LzM2MF9GXzkwNDA0/MjA4X3lNdVV6MXVK/c0dUdklKaHo5V3pU/ZWhPQm5qSlpuVEZj/LmpwZw"
+        },
+        {
+            "codeF": 8,
+            "name": "Watermelon",
+            "price": 6.00,
+            "photo": "https://imgs.search.brave.com/5iHssZ4yxJatpMgn65zIJviZf0nwB0j0PV-TZpPhRrI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTU3/NjM2OTI4L3Bob3Rv/L3dhdGVybWVsb24u/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PWUxTXJHZHkzaUZu/RmcwQ0pwTWFCOV9F/eXgzX3lkNng2YjBE/RjhJaFFELXM9"
+        },
+        {
+            "codeF": 9,
+            "name": "Kiwi",
+            "price": 30.00,
+            "photo": "https://imgs.search.brave.com/T1NTqiVwky_hTHCflq_1fhwyTkrYHisihalX1K6q1Aw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTg0/NjE0NTQ5L3Bob3Rv/L2tpd2lzLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1yQzRj/bVZXSHhoeDdHajR6/Ym56R0NQaDFpZDdO/Yy1nTFBCS1E4eG8z/dE5zPQ"
+        },
+        {
+            "codeF": 10,
+            "name": "Peach",
+            "price": 15.00,
+            "photo": "https://images.unsplash.com/photo-1629033188025-8d4f7e43e420"
+        },
+        {
+            "codeF": 11,
+            "name": "Pomegranate",
+            "price": 22.00,
+            "photo": "https://images.unsplash.com/photo-1605483591546-2bf5e362eecf"
+        },
+        {
+            "codeF": 12,
+            "name": "Lemon",
+            "price": 9.00,
+            "photo": "https://images.unsplash.com/photo-1590502592465-5130b589cbec"
+        },
+        {
+            "codeF": 13,
+            "name": "Cherry",
+            "price": 40.00,
+            "photo": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6"
+        },
+        {
+            "codeF": 14,
+            "name": "Pear",
+            "price": 14.00,
+            "photo": "https://images.unsplash.com/photo-1574201635302-388dd92a6dd1"
+        },
+        {
+            "codeF": 15,
+            "name": "Avocado",
+            "price": 28.00,
+            "photo": "https://images.unsplash.com/photo-1523049673857-260a967603e1"
+        },
+        {
+            "codeF": 16,
+            "name": "Dragon Fruit",
+            "price": 45.00,
+            "photo": "https://images.unsplash.com/photo-1561204155-114e88a84a35"
+        },
+        {
+            "codeF": 17,
+            "name": "Coconut",
+            "price": 25.00,
+            "photo": "https://images.unsplash.com/photo-1581833074140-7cd8f3b3f7d8"
+        },
+        {
+            "codeF": 18,
+            "name": "Fig",
+            "price": 30.00,
+            "photo": "https://images.unsplash.com/photo-1601039641847-4b7c9a98d8be"
+        },
+        {
+            "codeF": 19,
+            "name": "Papaya",
+            "price": 20.00,
+            "photo": "https://images.unsplash.com/photo-1576485225634-7d8c9b84588b"
+        },
+        {
+            "codeF": 20,
+            "name": "Plum",
+            "price": 16.00,
+            "photo": "https://images.unsplash.com/photo-1627912363002-4b92e8d63c8c"
+        }
+    ]
+}
