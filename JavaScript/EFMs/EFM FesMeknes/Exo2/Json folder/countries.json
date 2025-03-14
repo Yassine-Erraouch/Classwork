@@ -1,0 +1,30 @@
+
+{
+    "countries": [
+        {
+            "code": "AF",
+            "nom" : "Afrique",
+            "pays": ["Maroc", "Tunisie", "Egypt"]
+        },
+        {
+            "code": "EU",
+            "nom" : "Europe",
+            "pays": ["France", "Allemagne", "Italie"]
+        },
+        {
+            "code": "AS",
+            "nom" : "Asie",
+            "pays": ["Japon", "Chine", "Inde"]
+        },
+        {
+            "code": "AM",
+            "nom" : "Amerique",
+            "pays": ["US", "Canada", "Mexique"]
+        },
+        {
+            "code": "AU",
+            "nom" : "Australie",
+            "pays": ["Australie", "Nouvelle Zealand", "Nouvelle Guinée"]
+        }
+    ]
+}
