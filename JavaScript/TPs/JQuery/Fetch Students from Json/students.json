@@ -46,6 +46,60 @@
         "fullName": "Lebron James",
         "major": "Managment",
         "photo": ""
+    },
+    {
+        "cef": 8901234567,
+        "fullName": "Michael Bordan",
+        "major": "Culinary",
+        "photo": ""
+    },
+    {
+        "cef": 9012345678,
+        "fullName": "Serena Wills",
+        "major": "Math",
+        "photo": ""
+    },
+    {
+        "cef": 1234567891,
+        "fullName": "Elon Tusk",
+        "major": "Physics",
+        "photo": ""
+    },
+    {
+        "cef": 2345678902,
+        "fullName": "Bill Fates",
+        "major": "Computer Science",
+        "photo": ""
+    },
+    {
+        "cef": 3456789013,
+        "fullName": "Steve Hobs",
+        "major": "Design",
+        "photo": ""
+    },
+    {
+        "cef": 4567890124,
+        "fullName": "Mark Zuckerman",
+        "major": "Computer Science",
+        "photo": ""
+    },
+    {
+        "cef": 5678901235,
+        "fullName": "Larry Sage",
+        "major": "Computer Engineering",
+        "photo": ""
+    },
+    {
+        "cef": 6789012346,
+        "fullName": "Sundar Pitchai",
+        "major": "Metallurgical Engineering",
+        "photo": ""
+    },
+    {
+        "cef": 7890123457,
+        "fullName": "Mozart Amadeus",
+        "major": "Music",
+        "photo": ""
     }
     
 ]
