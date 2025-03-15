@@ -17,7 +17,15 @@ document.querySelector('#contSelect').addEventListener('change', (e) => {
     let continent = e.target.value;
     let countries = countriesByContinent[continent];
     document.querySelector('#countryOptions').innerHTML = countries.map((item)=> 
-    `<option value='${item}'>${item}</option>`).join('');
+    `<div class="row">
+        <div class="col-auto">
+            <input type="checkbox" name="country" id="${item}" class="form-check country-check">
+        </div>
+
+        <div class="col">
+            <label for="${item}" class="from-check" id="">${item}</label>
+        </div>
+    </div>`).join('');
 });
 
 // document.querySelector('#contSelect').innerHTML = countries.map((item)=> 
@@ -29,7 +37,7 @@ let data ;
 
 // function to display fetched data
 let displayData = () => {
-    document.querySelector('#display').innerHTML = data.map((item)=> 
+    document.querySelector('#display').innerHTML = data.map((item, i    )=> 
                 `<tr>
                     <td><input type="checkbox" name="" id="" class="check"></td>
                     <td>${item.code}</td>
@@ -40,7 +48,7 @@ let displayData = () => {
                         </ul>
                     </td>
                     <td>
-                        <button class="btn btn-primary" id="editBtn" onclick="edit()">Edit</button>
+                        <button class="btn btn-primary" id="editBtn" onclick="edit()" data-bs-toggle="modal" data-bs-target="#addModal">Edit</button>
                         <button class="btn btn-danger" id="removeBtn" onclick="remove(${i})">Remove</button>
                     </td>
                 </tr>`).join('');   
@@ -57,7 +65,7 @@ $.ajax({
     success: function(response) {
         data = response;
         displayData();
-        console.log(data);
+        
     },
     error: function(xhr, status, error) {
       // Handle errors here
@@ -69,22 +77,54 @@ let remove = (i) => {
     if (confirm("Êtes-vous sure vous voulez supprimer?")) {
         data.splice(i,1);
     }
+    displayData();
 }
 
 let add = () => {
     let cont =  document.querySelector('#contSelect');
-    let country = document.querySelector('#countryOptions');
+    let checks = document.querySelectorAll('.country-check');
+    selectedCountries = [];
 
-    if (cont.value != "" && country.value.length>0) {
+    console.log(typeof checks);
+
+
+    // Iterating through checked countries
+    for (let i= 0; i< checks.length; i++) {
+        if (checks[i].checked == true) {
+            selectedCountries.push(checks[i].value);
+        }
+    }
+
+    console.log(cont.value);
+    console.log(selectedCountries);
+    if (cont.value == "" && selectedCountries.length<0) {
         alert('Veuillez selectionner un continent et un ou plusieurs pays');
         return;
     }
 
-    let pays = [];
-    for (let i = 0; i < country.value.length; i++) {
-        pays.push(country.value[i]);
-    }
+    
+    data[cont.value] = selectedCountries; // updating the information in our data array 
+    displayData(); // displaying the updated data
 }
+
+
+let edit = (i) => {
+    let selectedCountries  = data[i]; 
+    let globalCountries =  countriesByContinent[data[i].nom];
+
+    document.querySelector('#contSelect').value = data[i].nom;
+
+    document.querySelector('#contSelect').dispatchEvent(new Event("change"));
+
+    console.log(selectedCountries, globalCountries);
+    
+    let options =  globalCountries.map((item, pos) => {
+        `<input type="checkbox" value="${item}" ${selectedCountries.findIndex((p, i)=> {item == p}) > -1? "checked": ""}> &nbrsp; ${item} <br>`}).join('');
+    
+    document.querySelector('#countryOptions').innerHTML = options;
+
+};
+   
 
 
 
