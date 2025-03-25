@@ -10,16 +10,17 @@
     <div class="container">
         <h3 class="text-center">Formulaire de Réservation de billets</h3>
         <legend>Identification</legend>
-        <form action="" class="form">
+        <form action="#" id="travelForm" class="form">
             <!-- first section -->
-            <div class="" id="">
+            <div class="d-flex flex-column gap-3 border p-2 rounded border-2 my-2" id="">
                 <!-- nom -->
                 <div class="row">
                     <div class="col">
                         <label for="fullName" class="form-label">Nom Complet:</label>
                     </div>
                     <div class="col">
-                        <input type="text" class="form-contorl" id="fullName" required>
+                        <input type="text" class="form-control" id="fullName" required>
+                        <span class="text-danger small" id="fullNameError"></span>
                     </div>
                 </div>
 
@@ -30,20 +31,22 @@
                     </div>
                     <div class="col">
                         <select name="" id="departCity" class="form-select" required>
-
+                            <option value="" disabled selected>Selectionner la ville de départ</option>
                         </select>
+                        <span class="text-danger small" id="departCityError"></span>
                     </div>
                 </div>
 
                 <!-- ville d'arrivé -->
                 <div class="row">
-                    <div class="col">
+                    <div class="col-6">
                         <label for="arrivCity" class="form-label">Ville d'arrivé:</label>
                     </div>
-                    <div class="col">
+                    <div class="col-6">
                         <select name="" id="arrivCity" class="form-select" required>
-
+                            <option value="" disabled selected>Selectionner la ville d'arrivé</option>
                         </select>
+                        <span class="text-danger small" id="arrivCityError"></span>
                     </div>
                     <div class="col"></div>
                 </div>
@@ -52,14 +55,15 @@
                 <!-- comfort -->
                 <div class="row">
                     <div class="col">
-                        <label for="class" class="form-label">Comfort:</label>
+                        Comfort
                     </div>
                     <div class="col">
                         <input type="radio" name="class" id="firstClass" class="form-radio">
-                        <label for="firstClass" class="form-label">1ère Classe</label>
+                        <label for="firstClass"  class="form-label">1ère Classe</label>
 
                         <input type="radio" name="class" id="secondClass" class="form-radio">
                         <label for="secondClass" class="form-label">2ème Classe</label>
+                        <span class="text-danger small" id="classError"></span>
                     </div>
                 </div>
 
@@ -69,7 +73,8 @@
                         <label for="nbr" class="form-label">Nombres de personnes: </label>
                     </div>
                     <div class="col">
-                        <input type="number" name="" id="nbr" class="form-control" value="1">
+                        <input type="number" name="" id="nbr" class="form-control" value="">
+                        <span class="text-danger small" id="nbrError"></span>
                     </div>  
                 </div>
 
@@ -86,42 +91,44 @@
             </div>
 
             <!-- second section -->
-            <div class="">
+            <div class="d-flex flex-column gap-3 border border-3 rounded p-2">
                 <legend>Paiment</legend>
-                <label for="" class="form-label">Paiment par: </label>
-                <div class="">
+                <p>Paiment par: </p>
+                <div class="d-flex flex-column gap-3">
                     <!-- card -->
                     <div class="row">
                         <div class="col">
-                            <input type="radio" name="" id="card" class="form-radio" required>
-                            <label for="card" class="form-label">Carte Bancaire(numero):</label>
+                            <input type="radio" name="payment" id="card" class="form-radio" required>
+                            Carte bancaire:
                         </div>
 
                         <div class="col">
                             <input type="number" name="" id="cardNumber" class="form-control" required>
+                            <span class="text-danger small" id="cardNumberError"></span>
                         </div>
                     </div>
 
                     <!-- cash -->
                     <div class="row">
                         <div class="col">
-                            <input type="radio" name="" id="cash" class="form-radio" required>
-                            <label for="card" class="form-label">Éspèces:</label>
+                            <input type="radio" name="payment" id="cash" class="form-radio" required>
+                            Éspèces:
                         </div>
 
                         <div class="col">
                             <!-- might not be needed -->
-                            <input type="number" name="" id="" class="form-control" readonly required>
+                            <input type="number" name="" id="cashInput" class="form-control"  required>
                         </div>
+                        <span class="text-danger small" id="paymentError"></span>
                     </div>
 
                     <div class="row">
                         <div class="col">
-                            <button class="btn btn-primary" onclick="validerForm()" id="validateBtn">Valider Formulaire</button>
+                            <button type="button" class="btn btn-primary" >Valider Formulaire</button>
                         </div>
                         
                         <div class="col">
-                            <button class="btn btn-primary" onclick="clearInputs()" id="clearBtn">Effacer</button>
+                            <button class="btn btn-primary"  id="clearBtn">Effacer</button>
                         </div>
                     </div>
 
