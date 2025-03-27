@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form With Validation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+        <form class="row g-3" enctype="multipart/form-data" id="myForm">
+            <!-- lastName -->
+            <div class="col-md-6">
+                <label for="nom" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="nom">
+                <span id="nomError" class="error"></span><br><br>
+            </div>
+
+            <!-- firstName -->
+            <div class="col-md-6">
+                <label for="prenom" class="form-label">Prenom</label>
+                <input type="text" class="form-control" id="prenom" >
+                <span id="prenomError" class="error"></span><br><br>
+            </div>
+            <!-- email -->
+            <div class="col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" class="form-control" id="email" >
+                <span id="emailError" class="error"></span><br><br>
+            </div>
+            <!-- website -->
+            <div class="col-md-6">
+                <label for="site" class="form-label">Site web</label>
+                <input type="text" class="form-control" id="site" >
+                <span id="urlError" class="error"></span><br><br>
+            </div>
+
+            <!-- passoword -->
+            <div class="col-md-6">
+                <label for="mdp" class="form-label">Mot de passe</label>
+                <input type="password" class="form-control" id="mdp">
+                <span id="mdpError" class="error"></span><br><br>
+            </div>
+            <!-- skills -->
+            <div class="col-md-6">
+                <label for="skills" class="form-label">Skills</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="html" id="html" name="skills" >
+                    <label class="form-check-label" for="html">
+                        Html
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="javascript" id="javascript" name="skills">
+                    <label class="form-check-label" for="javascript">
+                        Javascript
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="nodejs" id="nodejs" name="skills">
+                    <label class="form-check-label" for="nodejs">
+                        Node Js
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="laravel" id="laravel" name="skills">
+                    <label class="form-check-label" for="laravel">
+                        Laravel
+                    </label>
+                </div>
+                <span id="skillsError" class="error"></span><br><br>
+            </div>
+            <!-- countries -->
+            <div class="col-md-6">
+                <label for="pays" class="form-label">Pays</label>
+                <select class="form-select" id="pays" >
+                    <option value="">Selectionner un pays</option>
+                    <option value="FR">France</option>
+                    <option value="US">USA</option>
+                    <option value="UK">Angleterre</option>
+                </select>
+                <span id="paysError" class="error"></span><br><br>
+            </div>
+            <!-- gender -->
+            <div class="col-md-6">
+                <label for="genre" class="form-label">Genre</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="genre" id="homme" value="homme" >
+                    <label class="form-check-label" for="homme">
+                        Homme
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="genre" id="femme" value="femme" >
+                    <label class="form-check-label" for="femme">
+                        Femme
+                    </label>
+                </div>
+                <span id="genreError" class="error"></span><br><br>
+            </div>
+            <!-- comment -->
+            <div class="col-md-12">
+                <label for="commentaire" class="form-label">Commentaire</label>
+                <textarea class="form-control" id="commentaire" rows="3" ></textarea>
+                <span id="commentError" class="error"></span><br><br>
+            </div>
+            <!-- submit button -->
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </div>
+        </form>
+
+        <div class="mt-4" id="result">
+            <h3>Données du formulaire :</h3>
+            <p><strong>Nom :</strong> <span id="resNom"></span></p>
+            <p><strong>Prénom :</strong> <span id="resPrenom"></span></p>
+            <p><strong>Email :</strong> <span id="resEmail"></span></p>
+            <p><strong>Genre :</strong> <span id="resGenre"></span></p>
+            <p><strong>skills :</strong> <span id="resSkills"></span></p>
+            <p><strong>Pays :</strong> <span id="resPays"></span></p>
+            <p><strong>Site web :</strong> <span id="resSite"></span></p>
+            <p><strong>Commentaire</strong> <span id="resComment"></span></p>
+            
+
+        </div>
+    </div>
+
+
+
+
+    <script src="./form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
