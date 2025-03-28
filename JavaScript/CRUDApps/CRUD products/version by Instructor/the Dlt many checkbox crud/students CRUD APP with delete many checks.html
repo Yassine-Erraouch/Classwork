@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <h2>Liste des etudiants</h2>
+
+    <table id="myTable" border="1">
+        <thead>
+            <tr>
+                <th><input type="checkbox" id="mainCk" /></th>
+                <th>Code</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script type="text/javascript">
+
+        let students = localStorage.getItem('students') ? JSON.parse(localStorage.get('students')) : [{ code: 1, fname: 'stud1', lname: 'stud11' }, { code: 1, fname: 'stud1', lname: 'stud11' },
+            { code: 1, fname: 'stud1', lname: 'stud11' }, { code: 1, fname: 'stud1', lname: 'stud11' }, { code: 1, fname: 'stud1', lname: 'stud11' }, { code: 1, fname: 'stud1', lname: 'stud11' }, { code: 1, fname: 'stud1', lname: 'stud11' }
+            ];
+            displayData();
+
+            function displayData() {
+                document.querySelector('#myTable tbody').innerHTML = "";
+                students.forEach((element, index) => {
+                    document.querySelector('#myTable tbody').innerHTML += `
+              <tr><td><input type="checkbox" class="ck" value="${index}"/></td>
+                <td>${element.code}</td>
+                <td>${element.fname}</td>
+                <td>${element.lname}</td></tr>`;
+                });
+                document.querySelector('#myTable tbody').innerHTML += `<tr><td colspan="4">
+                  <button id="btnDelM">Delete Many</button>
+                </td></tr>`;
+
+            }
+
+            //gerer le clic sur #mainCk
+
+
+            document.getElementById('mainCk').onclick = function (e) {
+                let allCk = document.querySelectorAll('.ck');
+                [...allCk].forEach((elt, pos) => {
+                    elt.checked = e.target.checked;
+                });
+            }
+
+
+
+            //gere le clic sur #btnDelM
+
+            document.querySelector('#btnDelM').addEventListener('click', function (e) {
+                let allIds = [...document.querySelectorAll('.ck:checked')].map((c, i) => parseInt(c.value));
+                for (let v in allIds) {
+                    students.splice(v, 1);
+                }
+
+
+                displayData();
+
+            });
+
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
