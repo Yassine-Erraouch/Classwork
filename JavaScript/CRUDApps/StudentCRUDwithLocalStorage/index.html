@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Manager</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 50%; margin: auto; text-align: center; }
+        .form { background: #add8e6; padding: 20px; border-radius: 10px; }
+        .student-list { margin-top: 20px; }
+        .student-card { display: flex; align-items: center; border: 1px solid #ddd; padding: 10px; margin: 5px; }
+        img { width: 50px; height: 50px; border-radius: 50%; margin-right: 10px; }
+        button { margin: 5px; }
+    </style>
+</head>
+<body>
+    <form class="container">
+        <h2>Student Manager App</h2>
+        <div class="form">
+            <input type="text" id="name" placeholder="Student Name">
+            <input type="number" id="grade" placeholder="General Grade">
+            <input type="file" id="photo" accept="image/*">
+            <button onclick="saveStudent()">Save/Add</button>
+        </form>
+        <div class="student-list" id="studentList"></div>
+        <button onclick="deleteSelected()">Delete Selected</button>
+    </form>
+    <script>
+    let students = JSON.parse(localStorage.getItem('students')) || [];
+    let editIndex = null;
+ 
+    function saveStudent() {
+        const name = document.getElementById('name').value;
+        const grade = document.getElementById('grade').value;
+        const photo = document.getElementById('photo').files[0];
+        
+        if (!name || !grade || !photo) {
+            alert('All fields are required!');
+            return;
+        }
+        
+        const reader = new FileReader();
+        reader.readAsDataURL(photo);
+        reader.onload = function () {
+            if (editIndex === null) {
+                students.push({ name, grade, photo: reader.result });
+            } else {
+                students[editIndex] = { name, grade, photo: reader.result };
+                editIndex = null;
+            }
+            localStorage.setItem('students', JSON.stringify(students));
+            renderStudents();
+            document.querySelector('.form').reset();
+        }
+    }
+ 
+    function renderStudents() {
+        const studentList = document.getElementById('studentList');
+        studentList.innerHTML = '';
+        students.forEach((student, index) => {
+            studentList.innerHTML += `
+                <div class="student-card">
+                    <input type="checkbox" class="select-student" data-index="${index}">
+<img src="${student.photo}" alt="Student Photo">
+                    <div>
+Name: ${student.name}</p>
+                        <p>Grade: ${student.grade}</p>
+                    </div>
+                    <button onclick="editStudent(${index})">Edit</button>
+                    <button onclick="deleteStudent(${index})">Delete</button>
+                </div>
+            `;
+        });
+    }
+ 
+    function editStudent(index) {
+        document.getElementById('name').value = students[index].name;
+        document.getElementById('grade').value = students[index].grade;
+        editIndex = index;
+    }
+ 
+    function deleteStudent(index) {
+        if (confirm('Are you sure?')) {
+            students.splice(index, 1);
+            localStorage.setItem('students', JSON.stringify(students));
+            renderStudents();
+        }
+    }
+ 
+    function deleteSelected() {
+        if (confirm('Delete selected students?')) {
+            students = students.filter((_, index) =>
+                !document.querySelector(`[data-index="${index}"]`).checked
+            );
+            localStorage.setItem('students', JSON.stringify(students));
+            renderStudents();
+        }
+    }
+ 
+    renderStudents();
+</script>
+ 
+</body>
+</html>
