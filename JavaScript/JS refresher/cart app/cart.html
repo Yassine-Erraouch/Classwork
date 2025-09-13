@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechShop - Modern Electronics Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary: #5e72e4;
+            --secondary: #8392ab;
+            --success: #2dce89;
+            --danger: #f5365c;
+            --warning: #fb6340;
+            --info: #11cdef;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --bg-gradient: linear-gradient(87deg, #5e72e4 0, #825ee4 100%);
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9fafb;
+            color: #333;
+        }
+        
+        .navbar {
+            background: var(--bg-gradient);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .hero-section {
+            background: var(--bg-gradient);
+            color: white;
+            padding: 5rem 0;
+            margin-bottom: 3rem;
+        }
+        
+        .product-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 10px;
+            overflow: hidden;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 1.5rem;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .product-image {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            background-color: #f8f9fa;
+        }
+        
+        .cart-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 1.5rem;
+            position: sticky;
+            top: 20px;
+        }
+        
+        .cart-item {
+            border-bottom: 1px solid #eee;
+            padding: 1rem 0;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background-color: #4a5bd0;
+            border-color: #4a5bd0;
+        }
+        
+        .btn-success {
+            background-color: var(--success);
+            border-color: var(--success);
+        }
+        
+        .btn-danger {
+            background-color: var(--danger);
+            border-color: var(--danger);
+        }
+        
+        .quantity-btn {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+        
+        .quantity-input {
+            width: 40px;
+            text-align: center;
+            height: 30px;
+        }
+        
+        .total-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--bg-gradient);
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+        
+        .empty-cart {
+            text-align: center;
+            padding: 2rem;
+            color: var(--secondary);
+        }
+        
+        .empty-cart i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">TechShop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-outline-light" href="#cart">
+                            <i class="bi bi-cart3"></i> Cart
+                            <span class="badge bg-light text-primary ms-1" id="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-3">Welcome to TechShop</h1>
+            <p class="lead mb-4">Discover the latest tech gadgets at amazing prices</p>
+            <a href="#products" class="btn btn-lg btn-light">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container mb-5">
+        <div class="row">
+            <!-- Products Section -->
+            <div class="col-lg-8">
+                <h2 class="section-title" id="products">Our Products</h2>
+                <div class="row" id="products-container">
+                    <!-- Product 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card h-100">
+                            <div class="product-image">
+                                💻
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Laptop</h5>
+                                <p class="card-text text-success fw-bold">$1200.00</p>
+                                <button class="btn btn-primary w-100 add-to-cart" data-id="1">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card h-100">
+                            <div class="product-image">
+                                🎧
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Headphones</h5>
+                                <p class="card-text text-success fw-bold">$200.00</p>
+                                <button class="btn btn-primary w-100 add-to-cart" data-id="2">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card h-100">
+                            <div class="product-image">
+                                📱
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Phone</h5>
+                                <p class="card-text text-success fw-bold">$800.00</p>
+                                <button class="btn btn-primary w-100 add-to-cart" data-id="3">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 4 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card h-100">
+                            <div class="product-image">
+                                ⌚
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Watch</h5>
+                                <p class="card-text text-success fw-bold">$150.00</p>
+                                <button class="btn btn-primary w-100 add-to-cart" data-id="4">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 5 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card h-100">
+                            <div class="product-image">
+                                📱
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Tablet</h5>
+                                <p class="card-text text-success fw-bold">$600.00</p>
+                                <button class="btn btn-primary w-100 add-to-cart" data-id="5">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 6 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card h-100">
+                            <div class="product-image">
+                                📷
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Camera</h5>
+                                <p class="card-text text-success fw-bold">$900.00</p>
+                                <button class="btn btn-primary w-100 add-to-cart" data-id="6">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Shopping Cart -->
+            <div class="col-lg-4">
+                <div class="cart-container" id="cart">
+                    <h2 class="section-title">Your Cart</h2>
+                    <div id="cart-items">
+                        <div class="empty-cart">
+                            <i class="bi bi-cart-x"></i>
+                            <p>Your cart is empty</p>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top" id="cart-total" style="display: none !important;">
+                        <h5>Total:</h5>
+                        <div class="total-price">$0.00</div>
+                    </div>
+                    <button class="btn btn-primary w-100 mt-3" id="checkout-btn" style="display: none;">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>TechShop</h5>
+                    <p>Your trusted partner for all tech needs. We provide quality products at affordable prices.</p>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Products</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">About</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-geo-alt"></i> 123 Tech Street, City</li>
+                        <li><i class="bi bi-telephone"></i> (123) 456-7890</li>
+                        <li><i class="bi bi-envelope"></i> info@techshop.com</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Follow Us</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-twitter fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-linkedin fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p>&copy; 2023 TechShop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./cart.js"></script>
+    <script>
+        // JavaScript section left empty as requested
+        // You can implement the cart functionality here
+    </script>
+</body>
+</html>
