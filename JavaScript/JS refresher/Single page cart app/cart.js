@@ -235,5 +235,4 @@ function increaseQty(productId) {
 // function to remove item from cart
 function removeFromCart(productId) {
     cart = cart.filter(p => p.id !== productId);
-    loadCart();
-}
+    loadCar

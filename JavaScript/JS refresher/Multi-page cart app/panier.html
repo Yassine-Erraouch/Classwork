@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --primary: #5e72e4;
+            --secondary: #8392ab;
+            --success: #2dce89;
+            --danger: #f5365c;
+            --warning: #fb6340;
+            --info: #11cdef;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --bg-gradient: linear-gradient(87deg, #5e72e4 0, #825ee4 100%);
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9fafb;
+            color: #333;
+        }
+        
+        .navbar {
+            background: var(--bg-gradient);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .hero-section {
+            background: var(--bg-gradient);
+            color: white;
+            padding: 5rem 0;
+            margin-bottom: 3rem;
+        }
+        
+        .product-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 10px;
+            overflow: hidden;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 1.5rem;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .product-image {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            background-color: #f8f9fa;
+        }
+        
+        .cart-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 1.5rem;
+            position: sticky;
+            top: 20px;
+        }
+        
+        .cart-item {
+            border-bottom: 1px solid #eee;
+            padding: 1rem 0;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background-color: #4a5bd0;
+            border-color: #4a5bd0;
+        }
+        
+        .btn-success {
+            background-color: var(--success);
+            border-color: var(--success);
+        }
+        
+        .btn-danger {
+            background-color: var(--danger);
+            border-color: var(--danger);
+        }
+        
+        .quantity-btn {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+        
+        .quantity-input {
+            width: 40px;
+            text-align: center;
+            height: 30px;
+        }
+        
+        .total-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--bg-gradient);
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+        
+        .empty-cart {
+            text-align: center;
+            padding: 2rem;
+            color: var(--secondary);
+        }
+        
+        .empty-cart i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+     <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">TechShop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-outline-light" href="#cart">
+                            <i class="bi bi-cart3"></i> Cart
+                            <span class="badge bg-light text-primary ms-1" id="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="section-title">Cart Items</h2>
+                <div id="cart-items">
+                    <!-- Example cart item -->
+                    <div class="cart-item d-flex align-items-center justify-content-between" data-id="1">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="product-image">🧃</div>
+                            <div>
+                                <div><strong>Orange Juice</strong></div>
+                                <div class="text-secondary">Fresh &amp; Natural</div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <button class="quantity-btn btn btn-secondary" onclick="updateQuantity(1, -1)">-</button>
+                            <input type="text" class="quantity-input form-control" value="2" readonly>
+                            <button class="quantity-btn btn btn-secondary" onclick="updateQuantity(1, 1)">+</button>
+                        </div>
+                        <div class="text-end" style="width: 80px;">$6.00</div>
+                        <button class="btn btn-danger" onclick="removeItem(1)">Remove</button>
+                    </div>
+                    <!-- Example empty cart message -->
+                    <!--
+                    <div class="empty-cart">
+                        <i>🛒</i>
+                        <div>Your cart is empty.</div>
+                    </div>
+                    -->
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="cart-container">
+                    <h3>Summary</h3>
+                    <div class="mb-3 d-flex justify-content-between">
+                        <span>Total Items:</span>
+                        <span id="total-items">2</span>
+                    </div>
+                    <div class="mb-3 d-flex justify-content-between">
+                        <span>Total Price:</span>
+                        <span class="total-price" id="total-price">$6.00</span>
+                    </div>
+                    <button class="btn btn-success w-100">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container text-center">&copy; 2024 My Shop. All rights reserved.</div>
+    </footer>
+
+    <script>
+    function updateQuantity(id, change) {
+        // Placeholder for quantity update logic
+        alert('Update quantity for item ' + id + ' by ' + change);
+    }
+    function removeItem(id) {
+        // Placeholder for remove item logic
+        alert('Remove item ' + id);
+    }
+    </script>
+</body>
+</html>
