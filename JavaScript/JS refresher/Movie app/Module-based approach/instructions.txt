@@ -1,0 +1,12 @@
+functions.js (module)
+***** getData
+***** getWashList
+***** AddToWashList
+***** RemoveFromWashList
+***** getLengthOfWashList
+main.js 
+   ****importer et consommer les entités de functions.js 
+index.html , washlist.html
+******* importer navbar.html using fetch 
+******* importer main.js en tant que module 
+******** consommer les entités de main.js

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieWatch - My Watchlist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3a 100%);
+            color: #f5f5f5;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(44, 44, 84, 0.5);
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo i {
+            color: #e74c3c;
+            font-size: 32px;
+        }
+        
+        .logo h1 {
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(45deg, #3498db, #e74c3c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        
+        nav a {
+            color: #ddd;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            padding: 10px 16px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        nav a:hover {
+            color: #fff;
+            background: rgba(52, 152, 219, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        nav a.active {
+            color: #fff;
+            background: rgba(52, 152, 219, 0.3);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(26, 26, 58, 0.5);
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+        
+        .page-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 28px;
+            color: #3498db;
+        }
+        
+        .watchlist-stats {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 15px;
+            background: rgba(44, 44, 84, 0.5);
+            border-radius: 8px;
+            min-width: 120px;
+        }
+        
+        .stat-number {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2ecc71;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: #aaa;
+        }
+        
+        .watchlist-actions {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .action-btn {
+            padding: 12px 20px;
+            background: rgba(52, 152, 219, 0.2);
+            color: #3498db;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .action-btn:hover {
+            background: rgba(52, 152, 219, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .action-btn.primary {
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+        }
+        
+        .watchlist-container {
+            background: rgba(26, 26, 58, 0.8);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+        
+        .watchlist-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(44, 44, 84, 0.5);
+        }
+        
+        .watchlist-sort {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .watchlist-sort select {
+            padding: 8px 12px;
+            background: rgba(44, 44, 84, 0.5);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+        }
+        
+        .watchlist-item {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            border-bottom: 1px solid rgba(44, 44, 84, 0.5);
+            transition: all 0.3s;
+        }
+        
+        .watchlist-item:hover {
+            background: rgba(44, 44, 84, 0.3);
+            transform: translateX(5px);
+        }
+        
+        .watchlist-item:last-child {
+            border-bottom: none;
+        }
+        
+        .watchlist-poster {
+            width: 100px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .watchlist-details {
+            flex: 1;
+        }
+        
+        .watchlist-details h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        
+        .watchlist-meta {
+            color: #aaa;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .movie-rating {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #f39c12;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .watchlist-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .remove-btn {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .remove-btn:hover {
+            background: linear-gradient(45deg, #c0392b, #e74c3c);
+            transform: translateY(-2px);
+        }
+        
+        .watch-btn {
+            background: linear-gradient(45deg, #2ecc71, #27ae60);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .watch-btn:hover {
+            background: linear-gradient(45deg, #27ae60, #2ecc71);
+            transform: translateY(-2px);
+        }
+        
+        .empty-watchlist {
+            text-align: center;
+            padding: 60px 20px;
+            color: #aaa;
+        }
+        
+        .empty-watchlist i {
+            font-size: 64px;
+            margin-bottom: 20px;
+            color: #3498db;
+        }
+        
+        .empty-watchlist h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+        
+        .empty-watchlist p {
+            margin-bottom: 30px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .browse-movies-btn {
+            padding: 12px 24px;
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .browse-movies-btn:hover {
+            background: linear-gradient(45deg, #2980b9, #3498db);
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+            border-top: 1px solid rgba(44, 44, 84, 0.5);
+            color: #aaa;
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .page-header {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .watchlist-stats {
+                width: 100%;
+                justify-content: space-around;
+            }
+            
+            .watchlist-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .watchlist-poster {
+                align-self: center;
+            }
+            
+            .watchlist-actions {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-film"></i>
+                <h1>MovieWatch</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="main.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#" class="active"><i class="fas fa-bookmark"></i> Watchlist <span class="watchlist-count">3</span></a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="page-header">
+            <div class="page-title">
+                <i class="fas fa-bookmark"></i>
+                <h2>My Watchlist</h2>
+            </div>
+            
+            <div class="watchlist-stats">
+                <div class="stat-item">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Movies</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">8.7</div>
+                    <div class="stat-label">Avg Rating</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">6.5h</div>
+                    <div class="stat-label">Total Runtime</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="watchlist-actions">
+            <button class="action-btn primary"><i class="fas fa-random"></i> Suggest Similar</button>
+            <button class="action-btn"><i class="fas fa-filter"></i> Filter</button>
+            <button class="action-btn"><i class="fas fa-share"></i> Share List</button>
+        </div>
+        
+        <div class="watchlist-container">
+            <div class="watchlist-header">
+                <h3>Movies to Watch</h3>
+                <div class="watchlist-sort">
+                    <span>Sort by:</span>
+                    <select>
+                        <option>Recently Added</option>
+                        <option>Rating</option>
+                        <option>Release Date</option>
+                        <option>Title</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Watchlist Item 1 -->
+            <div class="watchlist-item">
+                <img src="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg" alt="The Dark Knight" class="watchlist-poster">
+                <div class="watchlist-details">
+                    <h3>The Dark Knight</h3>
+                    <p class="watchlist-meta">2008 • Action, Crime, Drama • 2h 32m</p>
+                    <div class="movie-rating">
+                        <i class="fas fa-star"></i>
+                        <span>9.0</span>
+                    </div>
+                    <p>When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.</p>
+                </div>
+                <div class="watchlist-actions">
+                    <button class="watch-btn"><i class="fas fa-play"></i> Watched</button>
+                    <button class="remove-btn"><i class="fas fa-trash"></i> Remove</button>
+                </div>
+            </div>
+            
+            <!-- Watchlist Item 2 -->
+            <div class="watchlist-item">
+                <img src="https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg" alt="Avengers: Endgame" class="watchlist-poster">
+                <div class="watchlist-details">
+                    <h3>Avengers: Endgame</h3>
+                    <p class="watchlist-meta">2019 • Action, Adventure, Drama • 3h 1m</p>
+                    <div class="movie-rating">
+                        <i class="fas fa-star"></i>
+                        <span>8.4</span>
+                    </div>
+                    <p>After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.</p>
+                </div>
+                <div class="watchlist-actions">
+                    <button class="watch-btn"><i class="fas fa-play"></i> Watched</button>
+                    <button class="remove-btn"><i class="fas fa-trash"></i> Remove

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieWatch - Discover Films</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3a 100%);
+            color: #f5f5f5;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(44, 44, 84, 0.5);
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo i {
+            color: #e74c3c;
+            font-size: 32px;
+        }
+        
+        .logo h1 {
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(45deg, #3498db, #e74c3c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        
+        nav a {
+            color: #ddd;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            padding: 10px 16px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        nav a:hover {
+            color: #fff;
+            background: rgba(52, 152, 219, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        nav a.active {
+            color: #fff;
+            background: rgba(52, 152, 219, 0.3);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: rgba(26, 26, 58, 0.5);
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #3498db, #e74c3c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: #aaa;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .search-box {
+            display: flex;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .search-box input {
+            flex: 1;
+            padding: 16px 20px;
+            border: none;
+            background: rgba(26, 26, 58, 0.8);
+            color: white;
+            font-size: 16px;
+        }
+        
+        .search-box input:focus {
+            outline: 2px solid #3498db;
+        }
+        
+        .search-box button {
+            padding: 16px 24px;
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+        
+        .search-box button:hover {
+            background: linear-gradient(45deg, #2980b9, #3498db);
+        }
+        
+        .section-title {
+            margin-bottom: 25px;
+            font-size: 24px;
+            color: #3498db;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(52, 152, 219, 0.3);
+        }
+        
+        .movies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .movie-card {
+            background: rgba(26, 26, 58, 0.8);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .movie-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+        
+        .movie-poster {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .movie-card:hover .movie-poster {
+            transform: scale(1.05);
+        }
+        
+        .movie-info {
+            padding: 20px;
+        }
+        
+        .movie-title {
+            font-size: 18px;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: #fff;
+        }
+        
+        .movie-year {
+            color: #aaa;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+        
+        .movie-rating {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #f39c12;
+            font-weight: 600;
+        }
+        
+        .add-to-watchlist {
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(45deg, #2ecc71, #27ae60);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 12px;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+        
+        .add-to-watchlist:hover {
+            background: linear-gradient(45deg, #27ae60, #2ecc71);
+            transform: translateY(-2px);
+        }
+        
+        .add-to-watchlist.added {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+        }
+        
+        .watchlist-count {
+            background: #e74c3c;
+            color: white;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            margin-left: 5px;
+        }
+        
+        .quick-watchlist {
+            background: rgba(26, 26, 58, 0.8);
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+        
+        .quick-watchlist-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .view-all-btn {
+            padding: 8px 16px;
+            background: rgba(52, 152, 219, 0.2);
+            color: #3498db;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .view-all-btn:hover {
+            background: rgba(52, 152, 219, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .watchlist-preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+        }
+        
+        .watchlist-preview-item {
+            background: rgba(44, 44, 84, 0.5);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        
+        .watchlist-preview-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        
+        .watchlist-preview-poster {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .watchlist-preview-info {
+            padding: 15px;
+        }
+        
+        .watchlist-preview-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+            border-top: 1px solid rgba(44, 44, 84, 0.5);
+            color: #aaa;
+        }
+        
+        @media (max-width: 768px) {
+            .movies-grid {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+                gap: 15px;
+            }
+            
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-film"></i>
+                <h1>MovieWatch</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="watchlist.html"><i class="fas fa-bookmark"></i> Watchlist <span class="watchlist-count">3</span></a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="hero">
+            <h2>Discover Your Next Favorite Movie</h2>
+            <p>Search through thousands of films and create your personalized watchlist</p>
+        </div>
+        
+        <div class="search-box">
+            <input type="text" id="search-bar" placeholder="Search for movies...">
+            <button><i class="fas fa-search"></i> Search</button>
+        </div>
+        
+        <h2 class="section-title"><i class="fas fa-fire"></i> Popular Movies</h2>
+        
+        <div class="movies-grid">
+            <!-- Movie Card 1 -->
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg" alt="The Dark Knight" class="movie-poster">
+                <div class="movie-info">
+                    <h3 class="movie-title">The Dark Knight</h3>
+                    <p class="movie-year">2008 • Action, Crime, Drama</p>
+                    <div class="movie-rating">
+                        <i class="fas fa-star"></i>
+                        <span>9.0</span>
+                    </div>
+                    <button class="add-to-watchlist">Add to Watchlist</button>
+                </div>
+            </div>
+            
+            <!-- Movie Card 2 -->
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg" alt="The Godfather" class="movie-poster">
+                <div class="movie-info">
+                    <h3 class="movie-title">The Godfather</h3>
+                    <p class="movie-year">1972 • Crime, Drama</p>
+                    <div class="movie-rating">
+                        <i class="fas fa-star"></i>
+                        <span>9.2</span>
+                    </div>
+                    <button class="add-to-watchlist">Add to Watchlist</button>
+                </div>
+            </div>
+            
+            <!-- Movie Card 3 -->
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/M/MV5BMTMxOTEwNDcxN15BMl5BanBnXkFtZTcwOTg0MTUzNA@@._V1_.jpg" alt="The Dark Knight Rises" class="movie-poster">
+                <div class="movie-info">
+                    <h3 class="movie-title">The Dark Knight Rises</h3>
+                    <p class="movie-year">2012 • Action, Adventure</p>
+                    <div class="movie-rating">
+                        <i class="fas fa-star"></i>
+                        <span>8.4</span>
+                    </div>
+                    <button class="add-to-watchlist">Add to Watchlist</button>
+                </div>
+            </div>
+            
+            <!-- Movie Card 4 -->
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg" alt="Avengers: Endgame" class="movie-poster">
+                <div class="movie-info">
+                    <h3 class="movie-title">Avengers: Endgame</h3>
+                    <p class="movie-year">2019 • Action, Adventure</p>
+                    <div class="movie-rating">
+                        <i class="fas fa-star"></i>
+                        <span>8.4</span>
+                    </div>
+                    <button class="add-to-watchlist">Add to Watchlist</button>
+                </div>
+            </div>
+            
+            <!-- Movie Card 5 -->
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg" alt="The Shawshank Redemption" class="movie-poster">
+                <div class="movie-info">
+                    <h3 class="movie-title">The Shawshank Redemption</h3>
+                    <p class="movie-year">1994 • Drama</p>
+                    <div class="movie-rating">
+                        <i class="fas fa-star"></i>
+                        <span>9.3</span>
+                    </div>
+                    <button class="add-to-watchlist">Add to Watchlist</button>
+                </div>
+            </div>
+            
+            <!-- Movie Card 6 -->
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/M/MV5BMTk4ODQzNDY3Ml5BMl5BanBnXkFtZTcwODA0NTM4Nw@@._V1_.jpg" alt="The Dark Knight Rises" class="movie-poster">
+                <div class="movie-info">
+                    <h3 class="movie-title">Inception</h3>
+                    <p class="movie-year">2010 • Action, Adventure</p>
+                    <div class="movie-rating">
+                        <i class="fas fa-star"></i>
+                        <span>8.8</span>
+                    </div>
+                    <button class="add-to-watchlist">Add to Watchlist</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="quick-watchlist">
+            <div class="quick-watchlist-header">
+                <h2 class="section-title"><i class="fas fa-bookmark"></i> Recently Added to Watchlist</h2>
+                <a href="watchlist.html" class="view-all-btn">View All</a>
+            </div>
+            
+            <div class="watchlist-preview">
+                <!-- Watchlist Preview Item 1 -->
+                <div class="watchlist-preview-item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg" alt="The Dark Knight" class="watchlist-preview-poster">
+                    <div class="watchlist-preview-info">
+                        <h3 class="watchlist-preview-title">The Dark Knight</h3>
+                        <div class="movie-rating">
+                            <i class="fas fa-star"></i>
+                            <span>9.0</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Watchlist Preview Item 2 -->
+                <div class="watchlist-preview-item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg" alt="Avengers: Endgame" class="watchlist-preview-poster">
+                    <div class="watchlist-preview-info">
+                        <h3 class="watchlist-preview-title">Avengers: Endgame</h3>
+                        <div class="movie-rating">
+                            <i class="fas fa-star"></i>
+                            <span>8.4</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Watchlist Preview Item 3 -->
+                <div class="watchlist-preview-item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTk4ODQzNDY3Ml5BMl5BanBnXkFtZTcwODA0NTM4Nw@@._V1_.jpg" alt="Inception" class="watchlist-preview-poster">
+                    <div class="watchlist-preview-info">
+                        <h3 class="watchlist-preview-title">Inception</h3>
+                        <div class="movie-rating">
+                            <i class="fas fa-star"></i>
+                            <span>8.8</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2025 MovieWatch. All movie data from IMDb.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Simple interactivity for demonstration
+        document.querySelectorAll('.add-to-watchlist').forEach(button => {
+            button.addEventListener('click', function() {
+                this.classList.toggle('added');
+                this.textContent = this.classList.contains('added') ? 'Added to Watchlist' : 'Add to Watchlist';
+                
+                // Update watchlist count
+                const countElement = document.querySelector('.watchlist-count');
+                let count = parseInt(countElement.textContent);
+                count = this.classList.contains('added') ? count + 1 : count - 1;
+                countElement.textContent = count;
+            });
+        });
+    </script>
+</body>
+</html>
